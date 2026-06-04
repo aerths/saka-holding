@@ -3,6 +3,7 @@ import Logo from '@/components/ui/Logo.vue';
 import Emblem from '@/components/header/emblem.vue';
 import user from '@/components/header/user.vue';
 import call from '@/components/header/call.vue';
+import Navigator from '@/components/header/Navigator.vue';
 
 </script>
 
@@ -19,6 +20,9 @@ import call from '@/components/header/call.vue';
       <user />
       <call />
     </div>
+  </div>
+  <div class="navWrapper">
+    <Navigator />
   </div>
 </template>
 
@@ -39,5 +43,10 @@ import call from '@/components/header/call.vue';
     padding: 0px 80px;
     gap: 8px
   }
+}
+
+.navWrapper {
+  display: flex;
+  width: 100%;
 }
 </style>
