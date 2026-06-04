@@ -18,6 +18,7 @@ import call from '@/components/header/call.vue';
     <div class="container">
       <user />
       <call />
+      
     </div>
   </div>
 </template>
