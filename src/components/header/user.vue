@@ -15,6 +15,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 12px
+        gap: 10px
     }
 </style>

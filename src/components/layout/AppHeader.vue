@@ -12,8 +12,9 @@ import Lang from '@/components/header/Lang.vue';
     <div class="container">
       <Logo />
       <Emblem />
-      <div>
-        <span>Производитель турецкого трикотажного полотна</span>
+      <div class="text_header">
+        <span>Производитель турецкого</span>
+        <span>трикотажного полотна</span>
       </div>
     </div>
     <div class="container">
@@ -49,5 +50,10 @@ import Lang from '@/components/header/Lang.vue';
 .navWrapper {
   display: flex;
   width: 100%;
+}
+
+.text_header {
+  display: flex;
+  flex-direction: column;
 }
 </style>

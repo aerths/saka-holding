@@ -17,13 +17,13 @@
     .lang{
         display: flex;
         flex-direction: row;
-        gap: 2px;
+        gap: 6px;
         font-size: 12px;
         .ru{
             color: #FFF
         }
         .en{
-            color: argb(255 255 255 20)
+            color: var(--bg-duo-color);
         }
     }
     
