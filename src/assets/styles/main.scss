@@ -1,6 +1,9 @@
 @import url(./fonts.scss);
 body {
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .container{
@@ -11,10 +14,9 @@ body {
     align-items: center;
 }
 
-<<<<<<< HEAD
+
 * {
     margin: 0;
     padding: 0;
 }
-=======
->>>>>>> 524ec977e1da000e7d8f79612bd2f6ff6afc194d
+

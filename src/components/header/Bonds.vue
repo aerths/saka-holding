@@ -2,65 +2,55 @@
     <div class="bonds">
         
         <button class="BB">
-            <a>АКЦИИ</a>
+            АКЦИИ
         </button> 
         
         <div class="container">
-            <img src="../../assets/icons/bonds/Purple-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 58.svg" width="24px" height="24px">
             <h4>Кулинарная гладь</h4>
         </div>
 
         
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Grey-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 2.svg" width="24px" height="24px">
             <h4>Футер</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Brown-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 3.svg" width="24px" height="24px">
             <h4>Кулинарная гладь</h4>
         </div>
         <div class="container">
-            <img src="../../assets/icons/bonds/Orange-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse4.svg" width="24px" height="24px">
             <h4>Пике</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Pink-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 5.svg" width="24px" height="24px">
             <h4>Интерлок</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Light-green-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 6.svg" width="24px" height="24px">
             <h4>Капитоний</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Dark-blue-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 7.svg" width="24px" height="24px">
             <h4>Велюр</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Dark-purple-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 8.svg" width="24px" height="24px">
             <h4>Селаник</h4>
         </div>
 
         <div class="container">
-            <img src="../../assets/icons/bonds/Biege-ellipse.png" width="24px" height="24px">
+            <img src="../../assets/icons/bonds/Ellipse 9.svg" width="24px" height="24px">
             <h4>Вискоза</h4>
         </div>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     </div>
 </template>
 
@@ -81,18 +71,16 @@
             gap: 6px;
             max-width:150px;
         }
-
-    
-        
     .BB{
             border: none;
             padding: 12px 18px;
             background-color: var(--accent-color);
-            
+            font-weight: bold;
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0 100%);
             width: 100%;
             height: 100%;
             max-width: 140px;
+            text-align: left;
     }
         
     }
