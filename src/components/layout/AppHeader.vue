@@ -4,7 +4,7 @@ import Emblem from '@/components/header/emblem.vue';
 import user from '@/components/header/user.vue';
 import call from '@/components/header/call.vue';
 import Navigator from '@/components/header/Navigator.vue';
-
+import Lang from '@/components/header/Lang.vue';
 </script>
 
 <template>
@@ -19,7 +19,7 @@ import Navigator from '@/components/header/Navigator.vue';
     <div class="container">
       <user />
       <call />
-      
+      <Lang />
     </div>
   </div>
   <div class="navWrapper">
