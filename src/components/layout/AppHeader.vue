@@ -5,6 +5,7 @@ import user from '@/components/header/user.vue';
 import call from '@/components/header/call.vue';
 import Navigator from '@/components/header/Navigator.vue';
 import Lang from '@/components/header/Lang.vue';
+import Bonds from '@/components/header/Bonds.vue';
 </script>
 
 <template>
@@ -25,6 +26,9 @@ import Lang from '@/components/header/Lang.vue';
   </div>
   <div class="navWrapper">
     <Navigator />
+  </div>
+  <div class="bondsWrapper">
+    <Bonds />
   </div>
 </template>
 
