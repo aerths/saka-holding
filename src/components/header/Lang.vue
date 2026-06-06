@@ -1,11 +1,11 @@
 <template>
     <div class="lang">
         <div class="ru">
-            <a>RU</a>
+            <a>LIGHT</a>
         </div>
         <a>/</a>
         <div class="en">
-            <a>EN</a>
+            <a>DARK</a>
         </div>
     </div>
 </template>
