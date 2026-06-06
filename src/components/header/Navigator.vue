@@ -19,12 +19,14 @@
     width: 100%;
     background-color: var(--second-main-color);
     color: var(--bg-color);
-    padding: 20px 85px;
+    padding: 20px 320px;
 }
 
 .app-header__link {
     text-decoration: none;
     cursor: pointer;
     color: inherit;
+
+    
 }
 </style>

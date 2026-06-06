@@ -37,17 +37,17 @@ import Bonds from '@/components/header/Bonds.vue';
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 40px 0px;
+  padding: 40px 300px;
   align-items: center;
   background-color: var(--main-color);
   color: #fff;
   justify-content: space-between;
+  box-sizing: border-box;
   .container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px 80px;
-    gap: 8px
+    
   }
 }
 

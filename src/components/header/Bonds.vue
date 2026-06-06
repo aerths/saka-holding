@@ -63,7 +63,7 @@
         flex-direction: row;
         max-width: 100%;
         background-color: var(--main-color);
-        padding: 0px 85px;
+        padding: 0px 300px;
         justify-content: space-between;
         height: 50px;
         .container{

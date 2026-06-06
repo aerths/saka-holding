@@ -22,7 +22,7 @@ import FooterIcons from '@/components/footer/FooterIcons.vue';
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 35px 85px;
+        padding: 35px 300px;
         font-weight: SemiBold;
         font-size: 16px;
         h2{

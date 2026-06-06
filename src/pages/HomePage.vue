@@ -5,10 +5,17 @@
 
 <template>
     <div class="Page">
-        <Slider />
+        <!-- <Slider /> -->
         <FullBloks />
     </div>
 </template>
 
-<style>
+<style setup lang="scss">
+    .Page{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 300px;
+    }
 </style>
