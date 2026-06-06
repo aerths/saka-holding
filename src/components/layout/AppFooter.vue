@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import FooterTop from '@/components/footer/FooterTop.vue';
+import FooterBottom from '@/components/footer/FooterBottom.vue';
 </script>
 
 <template>
     <div class="footer">
         <FooterTop />
-        <div class="BottomFooter">
-
-        </div>
+        <FooterBottom />
     </div>
 </template>
 <style lang="css">
