@@ -29,7 +29,7 @@ defineProps<{
 
 
 
-<style>
+<style setup lang="scss">
     .blok_office {
         background-color: var(--second-main-color);
         max-width: 360px;
