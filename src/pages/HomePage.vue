@@ -2,6 +2,7 @@
     // import Slider from '@/components/slider/Slider.vue';
     import FullBloks from '@/components/cards-office/FullBloks.vue';
     import certificates from '@/components/certificates/certificates.vue';
+    import Form from '@/components/ApplicationForm/Form.vue';
 </script>
 
 <template>
@@ -9,6 +10,7 @@
         <!-- <Slider /> -->
         <FullBloks />
         <certificates />
+        <Form />
     </div>
 </template>
 

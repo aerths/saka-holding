@@ -70,6 +70,7 @@
             max-height: 100%;
             gap: 6px;
             max-width:150px;
+            cursor: pointer;
         }
     .BB{
             border: none;

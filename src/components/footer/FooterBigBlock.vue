@@ -10,7 +10,8 @@ defineProps<{
     <div class="FooterBigBlock">
         <div class="container">
             <div class="InputContainer">
-                <Input />
+                <h2>Следите за новостями</h2>
+                <Input theme="WB" text="Ваш E-mail"/>
             </div>
             <div class="CallContainer">
                 <call />

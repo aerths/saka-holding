@@ -16,5 +16,6 @@
         background-color: var(--accent-color);
         display: flex;
         justify-content: center;
+        cursor: pointer;
     }
 </style>

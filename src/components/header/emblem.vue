@@ -15,5 +15,6 @@
         gap: 12px;
         padding-right: 42px;
         padding-left: 18px;
+        cursor: pointer;
     }
 </style>

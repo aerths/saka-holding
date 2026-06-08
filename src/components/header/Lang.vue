@@ -19,11 +19,14 @@
         flex-direction: row;
         gap: 6px;
         font-size: 12px;
+        
         .ru{
-            color: #FFF
+            color: #FFF;
+            cursor: pointer;
         }
         .en{
             color: var(--bg-duo-color);
+            cursor: pointer;
         }
     }
     

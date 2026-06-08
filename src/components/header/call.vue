@@ -20,6 +20,7 @@
         align-items: center;
         justify-content: center;
         padding: 0px 42px;
+        cursor: pointer;
         .phone_number{
             display: flex;
             flex-direction: row;

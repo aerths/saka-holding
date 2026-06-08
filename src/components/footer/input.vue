@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import Button from '@/components/ui/Button.vue';
+defineProps<{
+  text: string
+  theme: 'default' | 'WB' 
+}>()
 </script>
 
 <template>
     <div class="InputBox">
-        <h2>Следите за новостями</h2>
+        
         <div class="Email">
-            <input type="email" id="email" placeholder="Ваш E-mail" required>
-            <Button theme="default" text="Отправить"/>
+            <input class="inp" :class="`inp--${theme}`" type="email" id="email" :placeholder="`${text}`" required>
+            <Button v-if="theme === 'WB'" theme="default" text="Отправить"/>
         </div>
     </div>
 
@@ -15,21 +19,29 @@ import Button from '@/components/ui/Button.vue';
 
 
 
-<style lang="scss">
+<style setup lang="scss">
     .ImputBox{
+        
         h2{
             font-weight: SemiBold;
             font-size: 16px;
             }}
         .Email{
        
-            input{
-                border-radius: 50px;
-                width: 400px;
+            .inp{
                 height: 59px;
                 background-color: var(--second-main-color);
                 border: none;
                 padding: 0px 40px;
+                &--default {
+                border-radius: 16px;
+                max-width: 237px;
+                }
+                &--WB {
+                width: 440px;
+                border-radius: 50px;
+                }
+                
             }
             input::placeholder{
                 color: white;
@@ -43,7 +55,10 @@ import Button from '@/components/ui/Button.vue';
                 top:0px;
                 right:0px;
             }
+
+            
         }
+        
     
     
         

@@ -14,8 +14,8 @@ import Bonds from '@/components/header/Bonds.vue';
       <Logo />
       <Emblem />
       <div class="text_header">
-        <span>Производитель турецкого</span>
-        <span>трикотажного полотна</span>
+        <span class="a-text">Производитель турецкого</span>
+        <span class="a-text">трикотажного полотна</span>
       </div>
     </div>
     <div class="container">
@@ -49,9 +49,11 @@ import Bonds from '@/components/header/Bonds.vue';
     align-items: center;
     
   }
-}
-
-.navWrapper {
+  .a-text{
+    font-weight: Light;
+    color: #ffffffd2;
+  }
+  .navWrapper {
   display: flex;
   width: 100%;
 }
@@ -60,4 +62,7 @@ import Bonds from '@/components/header/Bonds.vue';
   display: flex;
   flex-direction: column;
 }
+}
+
+
 </style>

@@ -15,10 +15,10 @@ import FooterBottom from '@/components/footer/FooterBottom.vue';
         display: flex;
         flex-direction: column;
         background-color: var(--main-color);
-        
+        padding: 35px 300px;
         min-height: 474px;
         color: #FFF;
-        
+        justify-content: space-between;
         
     }
 </style>

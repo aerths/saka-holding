@@ -40,7 +40,7 @@ import FooterBlock from '@/components/footer/FooterBlock.vue';
 <style lang="scss">
     .TopFooter{
             max-width: 100%;
-            padding: 35px 300px;
+            
             display: flex;
             flex-direction: row;
             justify-content: space-between;
