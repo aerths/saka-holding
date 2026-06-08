@@ -2,6 +2,9 @@
     import blok from '@/components/cards-office/blok.vue';
     import news1 from '@/assets/images/news/news1.png';
     import news2 from '@/assets/images/news/news2.png';
+    import news3 from '@/assets/images/news/news3.png';
+    import news4 from '@/assets/images/news/news4.png';
+    import news5 from '@/assets/images/news/news5.png';
 </script>
 
 <template>
@@ -15,7 +18,7 @@
             data="31.03.2022"
             />
         <blok
-            :image="news2"
+            :image="news4"
             NavText="Пример текста 
             для заголовка новости"
             text="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
@@ -24,14 +27,14 @@
         </div>
         <div class="blok_saka_und_slider">
         <blok
-            :image="news1"
+            :image="news2"
             NavText="Пример текста 
             для заголовка новости"
             text="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
             data="31.03.2022"
             />
         <blok
-            :image="news2"
+            :image="news5"
             NavText="Пример текста 
             для заголовка новости"
             text="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
@@ -40,14 +43,14 @@
         </div>
         <div class="blok_saka_und_slider">
         <blok
-            :image="news1"
+            :image="news3"
             NavText="Пример текста 
             для заголовка новости"
             text="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
             data="31.03.2022"
             />
         <blok
-            :image="news2"
+            :image="news1"
             NavText="Пример текста 
             для заголовка новости"
             text="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"

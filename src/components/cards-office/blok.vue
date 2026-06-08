@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import arrow from '@/components/ui/arrow.vue';
 defineProps<{
     NavText: string
     text: string
@@ -12,6 +13,9 @@ defineProps<{
     <div class="blok_office">
         <div class="blok_office_img">
             <img :src="image" alt="">
+        </div>
+        <div class="btn_arrow">
+            <arrow />
         </div>
         <div class="blok_office_text">
             <h3>
@@ -52,4 +56,11 @@ defineProps<{
     padding-bottom: 16px;
 }
     
+    .btn_arrow {
+        position: absolute;
+        display: flex;
+        top: 0px;
+        padding: 28px 28px;
+        justify-self: end;
+    }
 </style>
