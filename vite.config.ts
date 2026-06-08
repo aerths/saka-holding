@@ -4,6 +4,7 @@ import path from 'node:path'
 import svgLoader from 'vite-svg-loader'
 
 export default defineConfig({
+  base: '/saka-holding/',
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
@@ -13,7 +14,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: 'modern-compiler',
         additionalData: `
           @use "@/assets/styles/variables" as *;
           @use "@/assets/styles/mixins" as *;
