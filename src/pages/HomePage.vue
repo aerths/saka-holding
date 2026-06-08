@@ -1,12 +1,14 @@
 <script setup lang="ts">
-    import Slider from '@/components/slider/Slider.vue';
+    // import Slider from '@/components/slider/Slider.vue';
     import FullBloks from '@/components/cards-office/FullBloks.vue';
+    import certificates from '@/components/certificates/certificates.vue';
 </script>
 
 <template>
     <div class="Page">
         <!-- <Slider /> -->
         <FullBloks />
+        <certificates />
     </div>
 </template>
 

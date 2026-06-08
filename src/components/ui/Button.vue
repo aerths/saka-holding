@@ -1,13 +1,14 @@
 <script setup lang="ts">
 defineProps<{
   text:string
-  theme: 'default' | 'icon'
+  theme: 'default' | 'icon' | 'square'
 }>()
 </script>
 
 <template>
-  <button class="button" :class="`button-${{theme}}`">
-    <span v-if="theme === 'default'">{{text}}</span>
+  <button class="button" :class="`button--${theme}`">
+    <span>{{text}}</span>
+    <img v-if="theme === 'icon'" src="../../assets/icons/ArrowRight.svg">
   </button>
 </template>
 
@@ -15,9 +16,9 @@ defineProps<{
   
   .button{
     background-color: var(--accent-color);
-    
+    box-sizing: border-box;
     width: 182px;
-    height: 55px;
+    max-height: 55px;
     padding: 30px 17px;
     border-radius: 50px;
     border:none;
@@ -28,8 +29,15 @@ defineProps<{
     display: flex;
     align-items: center;
     justify-content: center;
-    &-default {
 
+    &--square {
+      border-radius: 4px;
+      max-height: 28px;
+      height: 28px;
+    }
+    &--icon{
+      min-width: 285px;
+      justify-content: space-between;
     }
   }
 </style>
