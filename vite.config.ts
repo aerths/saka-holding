@@ -4,6 +4,7 @@ import path from 'node:path'
 import svgLoader from 'vite-svg-loader'
 
 export default defineConfig({
+  base: '/saka-holding/',
   plugins: [vue(), svgLoader()],
   resolve: {
     alias: {
