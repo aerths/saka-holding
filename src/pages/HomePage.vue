@@ -6,6 +6,7 @@
     import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
     import BlockTShort from '@/components/clothes/BlockTShort.vue';
     import tkani from '@/components/tkani/tkani.vue';
+    import catalog from '@/components/description-saka/catalog.vue';
 </script>
 
 <template>
@@ -18,19 +19,20 @@
             <tkani />
         </div>
         <div class="Container-Block">
+            <catalog />
+        </div>
+        <div class="Container-Block">
             <certificates />
         </div>
-        
+        <div class="Container-Block">
+            <BlockTShort />
+        </div>
         <div class="Container-Block">
             <Form />
          </div>
         <div class="Container-Block" id="gray">
            <RecentlyViewed /> 
         </div>
-        <div class="Container-Block">
-            <BlockTShort />
-        </div>
-        
     </div>
 </template>
 
@@ -46,8 +48,8 @@
         #black{
             background-color: var(--main-color);
         }
-        .Container-Block:nth-child(2), 
-        .Container-Block:nth-child(4){
+        .Container-Block:nth-child(4), 
+        .Container-Block:nth-child(7){
             padding-left: 180px;
             padding-right: 180px
         }

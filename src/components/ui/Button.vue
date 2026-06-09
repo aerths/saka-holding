@@ -13,7 +13,7 @@ defineProps<{
 </template>
 
 <style setup lang="scss">
-  
+
   .button{
     background-color: var(--accent-color);
     box-sizing: border-box;
