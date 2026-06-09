@@ -3,14 +3,27 @@
     import FullBloks from '@/components/cards-office/FullBloks.vue';
     import certificates from '@/components/certificates/certificates.vue';
     import Form from '@/components/ApplicationForm/Form.vue';
+    import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
+    
 </script>
 
 <template>
     <div class="Page">
         <!-- <Slider /> -->
-        <FullBloks />
-        <certificates />
-        <Form />
+         <div class="Container-Block">
+            <FullBloks />
+         </div>
+        <div class="Container-Block">
+            <certificates />
+        </div>
+        
+        <div class="Container-Block">
+            <Form />
+         </div>
+        <div class="Container-Block" id="gray">
+           <RecentlyViewed /> 
+        </div>
+        
     </div>
 </template>
 
@@ -20,6 +33,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0px 300px;
+        #gray{
+            background-color: var(--bg-gray-color);
+        }
     }
 </style>

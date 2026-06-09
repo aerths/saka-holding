@@ -24,14 +24,14 @@ import Button from '@/components/ui/Button.vue';
 
 <style setup lang="scss">
 .form{
+    
     width: 100%;
     height: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--main-color);
-    margin-top: 200px;
-    margin-bottom: 200px;
+    
     padding: 50px 60px;
     border-radius: 16px;
     text-align: center;

@@ -17,7 +17,7 @@ defineProps<{
   .button{
     background-color: var(--accent-color);
     box-sizing: border-box;
-    width: 182px;
+    max-width: 182px;
     max-height: 55px;
     padding: 30px 17px;
     border-radius: 50px;
@@ -29,14 +29,16 @@ defineProps<{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 
     &--square {
       border-radius: 4px;
       max-height: 28px;
       height: 28px;
+
     }
     &--icon{
-      min-width: 285px;
+      max-width: 285px;
       justify-content: space-between;
     }
   }

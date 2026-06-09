@@ -76,9 +76,8 @@
     .blok_saka_und_slider {
     display: flex;
     flex-direction: column;
+    margin-bottom: 200px;
     
-    margin:50px 0px;
     gap: 220px;
-    margin-bottom: 500px;
   }
 </style>
