@@ -15,6 +15,78 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
 
 <template>
     <div class="full_block_clothes">
+        <div class="full_error_clothes">
+            <div class="text_block_clothes">
+                <h2>Актуальная палитра “Saka Tekstil” 
+                из 45+ цветов - поможет решить любые задачи, стоящие перед вами
+                </h2>
+            </div>
+            <div class="error_clothes">
+                <img src="../../assets/icons/colorclothes/Warning.png" alt="">
+                <div class="error_text_clothes">
+                    ВНИМАНИЕ! Цветопередача на вашем мониторе может значительно отличаться от оригинального цвета
+                </div>
+            </div>
+        </div>
+        <div class="part_block_clothes">
+            <tshort 
+            :image="blue"
+            text="A-104 Dark Grey"
+            />
+            <tshort 
+            :image="grey"
+            text="A-101 Grey"
+            />
+            <tshort
+            :image="white"
+            text="A-115 White"
+            />
+            <tshort
+            :image="black"
+            text="A-123 Black"
+            />
+            <tshort 
+            :image="blue"
+            text="A-104 Dark Grey"
+            />
+            <tshort 
+            :image="lightblue"
+            text="A-107 Blue"
+            />
+        </div>
+        <div class="part_block_clothes">
+            <tshort 
+            :image="lightlightblue"
+            text="A-118 Light Blue"
+            />
+            <tshort
+            :image="orange"
+            text="A-135 Orange"
+            />
+            <tshort 
+            :image="green"
+            text="A-136 Green"
+            />
+            <tshort 
+            :image="yellow"
+            text="A-125 Yellow"
+            />
+            <tshort 
+            :image="pink"
+            text="A-201 Purple"
+            />
+            <tshort 
+            :image="red"
+            text="A-100 Red"
+            />
+        </div>
+
+        <div class="full_error_clothes">
+            <div class="text_block_clothes">
+                <h2>Сезонная палитра
+                </h2>
+            </div>
+        </div>
         <div class="part_block_clothes">
             <tshort 
             :image="blue"
@@ -81,5 +153,19 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
         display: flex;
         flex-direction: row;
         gap: 90px;
+    }
+
+    .full_error_clothes {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .error_clothes {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
     }
 </style>
