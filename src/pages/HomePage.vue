@@ -4,7 +4,7 @@
     import certificates from '@/components/certificates/certificates.vue';
     import Form from '@/components/ApplicationForm/Form.vue';
     import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
-    
+    import BlockTShort from '@/components/clothes/BlockTShort.vue';
 </script>
 
 <template>
@@ -23,7 +23,9 @@
         <div class="Container-Block" id="gray">
            <RecentlyViewed /> 
         </div>
-        
+        <div class="Container-Block">
+            <BlockTShort />
+        </div>
     </div>
 </template>
 

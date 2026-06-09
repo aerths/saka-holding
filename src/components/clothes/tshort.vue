@@ -23,4 +23,9 @@ defineProps<{
         display: flex;
         flex-direction: column;
     }
+    
+    .img_clothes {
+        width: 130px;
+        height: 130px;
+    }
 </style>
