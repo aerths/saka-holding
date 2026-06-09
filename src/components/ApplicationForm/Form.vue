@@ -24,7 +24,6 @@ import Button from '@/components/ui/Button.vue';
 
 <style setup lang="scss">
 .form{
-    
     width: 100%;
     height: 330px;
     display: flex;

@@ -38,5 +38,10 @@
         #gray{
             background-color: var(--bg-gray-color);
         }
+        .Container-Block:nth-child(2), 
+        .Container-Block:nth-child(4){
+            padding-left: 180px;
+            padding-right: 180px
+        }
     }
 </style>
