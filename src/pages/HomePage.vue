@@ -5,14 +5,18 @@
     import Form from '@/components/ApplicationForm/Form.vue';
     import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
     import BlockTShort from '@/components/clothes/BlockTShort.vue';
+    import tkani from '@/components/tkani/tkani.vue';
 </script>
 
 <template>
     <div class="Page">
         <!-- <Slider /> -->
-         <div class="Container-Block">
+        <div class="Container-Block">
             <FullBloks />
-         </div>
+        </div>
+        <div class="Container-Block" id="black">
+            <tkani />
+        </div>
         <div class="Container-Block">
             <certificates />
         </div>
@@ -26,6 +30,7 @@
         <div class="Container-Block">
             <BlockTShort />
         </div>
+        
     </div>
 </template>
 
@@ -37,6 +42,9 @@
         align-items: center;
         #gray{
             background-color: var(--bg-gray-color);
+        }
+        #black{
+            background-color: var(--main-color);
         }
         .Container-Block:nth-child(2), 
         .Container-Block:nth-child(4){

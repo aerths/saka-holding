@@ -34,7 +34,7 @@ defineProps<{
     &--square {
       border-radius: 4px;
       max-height: 28px;
-      height: 28px;
+      padding: 15px 5px;
 
     }
     &--icon{
