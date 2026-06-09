@@ -27,6 +27,7 @@
   .certificates{
     display: flex;
     flex-direction: column;
+    max-width: 1600px;
     width: 100%;
     align-items: center;
     .container{

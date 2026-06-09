@@ -45,6 +45,7 @@ import Button from '@/components/ui/Button.vue';
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        max-width: 1400px;
     }
     .TextForm{
         display: flex;

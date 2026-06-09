@@ -81,7 +81,7 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
             />
         </div>
 
-        <div class="full_error_clothes">
+        <div class="full_error_clothes_double">
             <div class="text_block_clothes">
                 <h2>Сезонная палитра
                 </h2>
@@ -146,6 +146,7 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
     .full_block_clothes {
         display: flex;
         flex-direction: column;
+       
         gap: 67px;
     }
 
@@ -158,6 +159,7 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
     .full_error_clothes {
         display: flex;
         flex-direction: row;
+        max-width: 1230px;
         gap: 40px;
     }
 

@@ -70,8 +70,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    
-    
+    max-width: 1250px;
   }
     .blok_saka_und_slider {
     display: flex;

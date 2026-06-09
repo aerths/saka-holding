@@ -28,5 +28,6 @@ import swap from '@/components/certificates/swap.vue';
         width: 100%;
         align-items: center;
         justify-content: space-between;
+        max-width: 1600px;
     }
 </style>

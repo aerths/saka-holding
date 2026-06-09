@@ -47,7 +47,6 @@ import Bonds from '@/components/header/Bonds.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
-    
   }
   .a-text{
     font-weight: Light;
