@@ -26,6 +26,7 @@
         background-color: var(--second-main-color);
         margin-right: 33px;
         position: relative;
+        cursor: pointer;
         .push{
             background-color: var(--accent-color);
             width: 16px;

@@ -10,6 +10,9 @@ import cloth6 from '@/assets/images/cloth/from-p1/cloth6.png';
 
 <template>
 <div class="tkani">
+    <div class="TextCon">
+      <h1>Выбирайте из множества разновидностей тканей</h1>
+    </div>
     <div class="container">
         <tkan :image='cloth1' Btext="Футер 3-х Нитка"/>
         <tkan :image='cloth2' Btext="Френч Терри"/>
@@ -34,6 +37,10 @@ import cloth6 from '@/assets/images/cloth/from-p1/cloth6.png';
     width: 100%;
     max-width: 1250px;
     gap: 30px;
+    .TextCon{
+      max-width: 40%;
+      color: #FFF;
+    }
     .container{
         flex-direction: row;
         width: 100%;

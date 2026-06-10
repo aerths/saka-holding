@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    // import Slider from '@/components/slider/Slider.vue';
+    import Slider from '@/components/slider/Slider.vue';
     import FullBloks from '@/components/cards-office/FullBloks.vue';
     import certificates from '@/components/certificates/certificates.vue';
     import Form from '@/components/ApplicationForm/Form.vue';
@@ -11,7 +11,10 @@
 
 <template>
     <div class="Page">
-        <!-- <Slider /> -->
+        <div class="Container-Block">
+            <Slider />
+        </div>
+        
         <div class="Container-Block">
             <FullBloks />
         </div>
@@ -48,8 +51,11 @@
         #black{
             background-color: var(--main-color);
         }
-        .Container-Block:nth-child(4), 
-        .Container-Block:nth-child(7){
+        .Container-Block:nth-child(1){
+            padding-bottom: 0px;
+        }
+        .Container-Block:nth-child(5), 
+        .Container-Block:nth-child(8){
             padding-left: 180px;
             padding-right: 180px
         }
