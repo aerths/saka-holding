@@ -6,6 +6,7 @@ import call from '@/components/header/call.vue';
 import Navigator from '@/components/header/Navigator.vue';
 import Lang from '@/components/header/Lang.vue';
 import Bonds from '@/components/header/Bonds.vue';
+import basket from '@/components/header/basket.vue';
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Bonds from '@/components/header/Bonds.vue';
       </div>
     </div>
     <div class="container">
+      <basket />
       <user />
       <call />
       <Lang />
