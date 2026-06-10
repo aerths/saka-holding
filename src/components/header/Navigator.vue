@@ -4,7 +4,7 @@
         <RouterLink class="app-header__link" to="/catalog">Каталог</RouterLink>
         <RouterLink class="app-header__link" to="/about">О компании</RouterLink>
         <RouterLink class="app-header__link" to="/news">Новости</RouterLink>
-        <RouterLink class="app-header__link" to="/about">Доставка и оплата</RouterLink>
+        <RouterLink class="app-header__link" to="/payment">Доставка и оплата</RouterLink>
         <RouterLink class="app-header__link" to="/news">Контакты</RouterLink>
     </nav>
 </template>

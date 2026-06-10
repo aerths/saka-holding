@@ -5,7 +5,7 @@
 <template>
 <div class="catalog">
     <div class="img_catalog">
-        <img src="../../assets/images/large_images/SAKA-tower.png" alt="">
+        <img src="../../assets/images/large_images/flags.png" alt="">
     </div>
     <div class="title_catalog">
         <div class="one_title_catalog">
@@ -43,12 +43,12 @@
             </div>
             <div class="ellipce">
                 <img class="img_corow" src="../../assets/icons/crown.svg" alt="">
-                <h1>
-                    10 000+
-                </h1>
-                <p>
-                    Клиентов выбирают нашу компанию
-                </p>
+                    <h1>
+                        10 000+
+                    </h1>
+                    <p>
+                        Клиентов выбирают нашу компанию
+                    </p>
             </div>
         </div>
     </div>
@@ -61,7 +61,7 @@
         display: flex;
         flex-direction: row;
         gap: 100px;
-        background-color: var(--bg-gray-color);
+        background-color: var(--bg-color);
 
         .blok_yellow {
         background-color: var(--accent-color);
@@ -88,7 +88,7 @@
     .title_catalog {
         display: flex;
         flex-direction: column;
-        padding: 89px 0px;
+        padding: 40px 0px;
         justify-content: space-between;
     }
     .one_title_catalog {
@@ -100,8 +100,10 @@
     }
 
     .worthiness {
-        display: flex;
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 38px;
     }
 
     .ellipce {
@@ -109,12 +111,31 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         background-color: var(--bg-gray-color);
         border-radius: 50%;
+        width: 160px;
+        height: 160px;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+
+    .ellipce h1 {
+        font-size: 32px;
+        margin: 8px 0 4px 0;
+        color: var(--accent-color);
+    }
+
+    .ellipce p {
+        font-size: 13px;
+        margin: 0;
+        line-height: 1.3;
+        font-weight: bold;
     }
 
     .img_corow {
-        width: 24px;
-        height: 24px;
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
     }
 </style>
