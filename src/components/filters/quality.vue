@@ -3,7 +3,7 @@
 <template>
     <div class="quality">
         <div class="TextCon">
-            <h3>Цвет</h3>
+            <h3>Качество</h3>
             <img src="../../assets/icons/CaretRight.svg">
         </div>
         

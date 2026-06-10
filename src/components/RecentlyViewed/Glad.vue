@@ -5,13 +5,14 @@ defineProps<{
     price: string
     image: string
     size: string
+    theme: 'grey'
     
 }>()
 
 </script>
 
 <template>
-<div class="Glad">
+<div class="Glad" :class="`Glad--${theme}`">
     <img :src="image" alt="">
     <div class="TextCon">
         <h3>Кулинарная гладь</h3>
@@ -34,7 +35,7 @@ defineProps<{
         flex-direction: column;
         align-items: center;
         max-width: 260px;
-        max-height: 436px;
+        height: 436px;
         
         border-radius: 16px;
         
@@ -47,6 +48,8 @@ defineProps<{
             flex-direction: row;
             flex-wrap: wrap;
             padding: 22px 10% 11px;
+            width: 260px;
+            text-align: center;
             h2{
             margin: 6px;
             font-size: 22px;
@@ -68,5 +71,10 @@ defineProps<{
             }
         }
         
+        &--grey{
+            background-color: var(--bg-gray-color);
+            
+        }
     }
+    
 </style>

@@ -3,7 +3,7 @@
 <template>
     <div class="type">
         <div class="TextCon">
-            <h3>Цвет</h3>
+            <h3>Тип полотна</h3>
             <img src="../../assets/icons/CaretRight.svg">
         </div>
     </div>    
