@@ -10,12 +10,17 @@ import swap from '@/components/certificates/swap.vue';
 
 <template>
     <div class="RecentlyViewed">
+        <div class="TextCont">
+            <h1>Недавно просмотренные</h1>
+        </div>
+        <div class="container">
         <swap theme="left-light"/>
         <Glad :image="glad1" price="11,4$" size="180 см"/>
         <Glad :image="glad2" price="13$" size="180 см"/>
         <Glad :image="glad3" price="122,4$" size="180 см"/>
         <Glad :image="glad4" price="13,84$" size="180 см"/>
         <swap theme="right-light"/>
+        </div>
     </div>
 
 </template>
@@ -23,11 +28,21 @@ import swap from '@/components/certificates/swap.vue';
 
 <style setup lang="scss">
     .RecentlyViewed{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
         max-width: 1600px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .TextCont{
+            padding: 12px 130px;
+        }
+        .container{
+        
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        
     }
 </style>

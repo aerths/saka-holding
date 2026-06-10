@@ -61,13 +61,14 @@
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 9px;
-            justify-content: center;
+            
             width: 100%;
             align-items: center;
             justify-content: flex-start;
             padding-left: 20px;
             padding-top:10px ;
             max-height: 30px;
+            
  
             h4{
                 color: black;
