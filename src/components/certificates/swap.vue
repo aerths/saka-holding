@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  theme: 'left-light' | 'right-light' | 'left' | 'right'
+  theme: 'left-light' | 'right-light' | 'left' | 'right' | "square-left" | "square-right"
   color: string
 }>()
 </script>
@@ -33,6 +33,17 @@ defineProps<{
         }
         &--left-light {
             background-color: #FFF;
+        }
+        &--square-left{
+            border-radius: 16px;
+            width: 60px;
+            height: 60px;
+        }
+        &--square-right{
+            border-radius: 16px;
+            transform: rotate(180deg);
+            width: 60px;
+            height: 60px;
         }
     }
 </style>
