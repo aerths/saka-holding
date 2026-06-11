@@ -8,12 +8,12 @@ defineProps<{
 <template>
     <div class="header_about">
         <div class="text_about">
-            <p>
+            <a>
                 Главная
-            </p>
-            <p>
+            </a>
+            <a>
                 >
-            </p>
+            </a>
             <p>
                 {{text}}
             </p>
@@ -33,11 +33,15 @@ defineProps<{
         width: 100%;
         max-width: 1400px;
         align-items: flex-start;
+        a{
+            color: rgba(0, 0, 0, 0.459);
+        }
     }
 
     .text_about {
         display: flex;
         flex-direction: row;
         gap: 20px;
+        align-items: center;
     }
 </style>

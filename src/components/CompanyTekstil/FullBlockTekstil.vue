@@ -35,21 +35,19 @@ import tekstillOpenend from '../../assets/images/tekstillOpenend.png'
         display: flex;
         flex-direction: column;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1300px;
     }
 
     .title_saka_tekstil {
-        width: 100%;
         max-width: 500px;
-        padding-bottom: 20px;
+        color: #000;
+        opacity: 50%;
     }
 
     .full_block_texstill {
         display: flex;
         flex-direction: row;
-        width: 100%;
-        align-items: center;
         gap: 42px;
-        max-width: 1400px;
+        justify-content: space-between;
     }
 </style>

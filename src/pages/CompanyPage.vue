@@ -7,7 +7,7 @@ import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
 </script>
 
 <template>
-    <div class="Page">
+    <div class="CompanyPage">
         <div class="Container-Block">
             <location
             title="О компании"
@@ -36,5 +36,18 @@ import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
 </template>
 
 <style setup lang="scss"> 
-
+    .Container-Block:nth-child(4),
+    .Container-Block:nth-child(5){
+            padding-left: 180px;
+            padding-right: 180px;
+        }
+    .Container-Block:nth-child(1){
+            padding-bottom: 0;
+        }
+    .Container-Block:nth-child(2){
+            padding-top: 40px;
+        }
+    .Container-Block:nth-child(3){
+            padding-top: 0px;
+        }
 </style>
