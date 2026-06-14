@@ -4,6 +4,7 @@ import location from '../components/LocationNavig/location.vue';
 import FullBlockTekstil from '../components/CompanyTekstil/FullBlockTekstil.vue';
 import certificates from '../components/certificates/certificates.vue';
 import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
+import block3person from '@/components/block3person/block3person.vue';
 </script>
 
 <template>
@@ -26,9 +27,9 @@ import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
         <div class="Container-Block">
             <certificates />
         </div>
-        <!-- <div class="Container-Block">
-            много текста
-        </div> -->
+        <div class="component-persons">
+            <block3person />
+        </div>
         <div class="Container-Block" id="gray">
             <RecentlyViewed />
         </div>
@@ -37,7 +38,7 @@ import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
 
 <style setup lang="scss"> 
     .Container-Block:nth-child(4),
-    .Container-Block:nth-child(5){
+    .Container-Block:nth-child(6){
             padding-left: 180px;
             padding-right: 180px;
         }
