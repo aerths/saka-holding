@@ -58,10 +58,6 @@
             />
         </div>
     </div>
-
-
-    
-
 </template>
 
 <style setup lang="scss">
@@ -72,11 +68,11 @@
     justify-content: space-between;
     max-width: 1250px;
   }
-    .blok_saka_und_slider {
+
+  .blok_saka_und_slider {
     display: flex;
     flex-direction: column;
     margin-bottom: 200px;
-    
     gap: 220px;
   }
 </style>

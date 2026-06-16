@@ -1,5 +1,4 @@
 <template>
-    
     <div class="user">
         <img src="../../assets/icons/User.svg" alt="">
         <span>Войти</span>
@@ -9,13 +8,13 @@
 <script>
 </script>
 
-<style lang ="scss">
-    .user{
-        color: #FFF;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-    }
+<style lang="scss">
+.user {
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
 </style>

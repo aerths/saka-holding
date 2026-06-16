@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import Logo from '@/components/ui/Logo.vue';
 import Emblem from '@/components/header/emblem.vue';
 import user from '@/components/header/user.vue';
@@ -7,11 +8,13 @@ import Navigator from '@/components/header/Navigator.vue';
 import Lang from '@/components/header/Lang.vue';
 import Bonds from '@/components/header/Bonds.vue';
 import basket from '@/components/header/basket.vue';
+
+const isMenuOpen = ref(false);
 </script>
 
 <template>
   <div class="header">
-    <div class="container">
+    <div class="container header__brand">
       <Logo />
       <Emblem />
       <div class="text_header">
@@ -19,14 +22,26 @@ import basket from '@/components/header/basket.vue';
         <span class="a-text">трикотажного полотна</span>
       </div>
     </div>
-    <div class="container">
+    <div class="container header__actions">
       <basket />
       <user />
       <call />
       <Lang />
+      <button
+        class="menu-toggle"
+        type="button"
+        :aria-expanded="isMenuOpen"
+        aria-controls="header-navigation"
+        aria-label="Toggle navigation"
+        @click="isMenuOpen = !isMenuOpen"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
-  <div class="navWrapper">
+  <div id="header-navigation" class="navWrapper" :class="{ 'navWrapper--open': isMenuOpen }">
     <Navigator />
   </div>
   <div class="bondsWrapper">
@@ -35,35 +50,137 @@ import basket from '@/components/header/basket.vue';
 </template>
 
 <style lang="scss">
-.header{
+@use '@/assets/styles/mixins' as *;
+
+.header {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  padding: 40px 300px;
+  padding: 40px clamp(24px, 6vw, 120px);
   align-items: center;
+  justify-content: space-between;
+  gap: 24px;
   background-color: var(--main-color);
   color: #fff;
-  justify-content: space-between;
   box-sizing: border-box;
-  .container{
+
+  @include laptop {
+    padding: 20px 32px;
+    min-height: 88px;
+  }
+
+  @include mobile {
+    padding: 18px 16px;
+    min-height: 76px;
+    gap: 12px;
+  }
+
+  .container {
     display: flex;
-    flex-direction: row;
     align-items: center;
   }
-  .a-text{
-    font-weight: Light;
+
+  .header__brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 18px;
+
+    @include laptop {
+      gap: 12px;
+    }
+
+    @include mobile {
+      gap: 8px;
+    }
+  }
+
+  .header__actions {
+    flex: 0 0 auto;
+    gap: 18px;
+
+    @include laptop {
+      gap: 0;
+    }
+  }
+
+  .a-text {
+    font-weight: light;
     color: #ffffffd2;
   }
-  .navWrapper {
+
+  .text_header {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    @include laptop {
+      display: none;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    flex-shrink: 0;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: currentColor;
+      border-radius: 999px;
+    }
+
+    @include laptop {
+      display: inline-flex;
+    }
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include laptop {
+    .header__actions > :not(.menu-toggle) {
+      display: none;
+    }
+  }
+
+  .logo,
+  .icons_logo {
+    flex-shrink: 1;
+    min-width: 0;
+  }
+}
+
+.navWrapper {
   display: flex;
   width: 100%;
+
+  @include laptop {
+    display: none;
+  }
 }
 
-.text_header {
-  display: flex;
-  flex-direction: column;
-}
+.navWrapper--open {
+  @include laptop {
+    display: block;
+  }
 }
 
-
+.bondsWrapper {
+  @include laptop {
+    display: none;
+  }
+}
 </style>

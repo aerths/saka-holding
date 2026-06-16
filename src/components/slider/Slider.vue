@@ -105,19 +105,34 @@ onBeforeUnmount(stopSlider)
 </template>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins' as *;
+
 .slider {
   color: #FFF;
     background-color: var(--bg-color);
     width: 100%;
+
     &__card {
         position: relative;
         width: 100%;
-        max-width:1400px;
+        max-width: 1400px;
         height: 438px;
         margin: 0 auto;
         overflow: visible;
         border-radius: 13px;
         background-color: var(--black-color);
+
+        @include laptop {
+            height: 360px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        @include mobile {
+            height: 286px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
     }
 
     &__slides,
@@ -132,8 +147,12 @@ onBeforeUnmount(stopSlider)
         opacity: 0;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 100% 100%;
+        background-size: cover;
         transition: opacity 0.6s ease;
+
+        @include laptop {
+            border-radius: 10px;
+        }
 
         &--active {
             opacity: 1;
@@ -143,9 +162,19 @@ onBeforeUnmount(stopSlider)
     &__content {
         position: relative;
         z-index: 2;
-        max-width: 80%;
+        max-width: 56%;
         padding: 68px 0 0 95px;
         text-align: left;
+
+        @include laptop {
+            max-width: 60%;
+            padding: 48px 0 0 36px;
+        }
+
+        @include mobile {
+            max-width: 70%;
+            padding: 22px 0 0 22px;
+        }
     }
 
     &__title {
@@ -155,6 +184,18 @@ onBeforeUnmount(stopSlider)
         font-weight: 700;
         line-height: 1.35;
         letter-spacing: 1.1px;
+
+        @include laptop {
+            font-size: 22px;
+            line-height: 1.3;
+            letter-spacing: 0.4px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+            line-height: 1.28;
+            letter-spacing: 0.2px;
+        }
 
         span {
             color: var(--accent-color);
@@ -172,6 +213,18 @@ onBeforeUnmount(stopSlider)
         height: auto;
         pointer-events: none;
         user-select: none;
+
+        @include laptop {
+            right: 8px;
+            bottom: -2px;
+            width: 320px;
+        }
+
+        @include mobile {
+            right: -6px;
+            bottom: 0;
+            width: 170px;
+        }
     }
 
     &__bottom {
@@ -182,13 +235,32 @@ onBeforeUnmount(stopSlider)
         display: flex;
         align-items: center;
         gap: 44px;
+
+        @include laptop {
+            left: 36px;
+            bottom: 24px;
+            gap: 24px;
+        }
+
+        @include mobile {
+            left: 22px;
+            bottom: 18px;
+            gap: 18px;
+        }
     }
 
     &__dots {
         display: flex;
         align-items: center;
         gap: 24px;
-        
+
+        @include laptop {
+            gap: 12px;
+        }
+
+        @include mobile {
+            gap: 8px;
+        }
     }
 
     &__dot {
@@ -198,6 +270,15 @@ onBeforeUnmount(stopSlider)
         border: 0;
         background-color: var(--second-main-color);
         cursor: pointer;
+
+        @include laptop {
+            width: 18px;
+        }
+
+        @include mobile {
+            width: 12px;
+            height: 2px;
+        }
 
         &--active {
             background-color: var(--accent-color);
@@ -213,12 +294,72 @@ onBeforeUnmount(stopSlider)
         font-weight: 400;
         letter-spacing: 1px;
 
+        @include laptop {
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        @include mobile {
+            gap: 8px;
+            font-size: 10px;
+        }
+
         span:first-child {
             color: #FFF;
         }
     }
-    .BT{
+
+    .BT {
       margin-top: 30px;
+
+      @include laptop {
+        margin-top: 24px;
+      }
+
+      @include mobile {
+        margin-top: 16px;
+      }
+    }
+
+    .BT :deep(.button) {
+      width: auto;
+      min-width: 182px;
+      max-width: 182px;
+      min-height: 52px;
+      padding: 16px 20px;
+
+      @include laptop {
+        min-width: 150px;
+        max-width: 150px;
+        min-height: 44px;
+        padding: 14px 16px;
+        font-size: 14px;
+      }
+
+      @include mobile {
+        min-width: 122px;
+        max-width: 122px;
+        min-height: 36px;
+        padding: 10px 12px;
+        font-size: 11px;
+      }
+    }
+
+    .BT :deep(.button--icon) {
+      @include laptop {
+        gap: 10px;
+      }
+
+      @include mobile {
+        gap: 8px;
+      }
+    }
+
+    .BT :deep(.button img) {
+      @include mobile {
+        width: 14px;
+        height: 14px;
+      }
     }
 }
 
