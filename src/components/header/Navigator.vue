@@ -33,6 +33,8 @@
     }
 
     @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 14px;
         padding: 16px;
     }

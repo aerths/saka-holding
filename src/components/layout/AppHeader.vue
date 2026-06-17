@@ -115,6 +115,10 @@ const isMenuOpen = ref(false);
     @include laptop {
       display: none;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .menu-toggle {
@@ -145,12 +149,19 @@ const isMenuOpen = ref(false);
     }
 
     @include mobile {
+      display: inline-flex;
       width: 40px;
       height: 40px;
     }
   }
 
   @include laptop {
+    .header__actions > :not(.menu-toggle) {
+      display: none;
+    }
+  }
+
+  @include mobile {
     .header__actions > :not(.menu-toggle) {
       display: none;
     }
@@ -170,16 +181,28 @@ const isMenuOpen = ref(false);
   @include laptop {
     display: none;
   }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .navWrapper--open {
   @include laptop {
     display: block;
   }
+
+  @include mobile {
+    display: block;
+  }
 }
 
 .bondsWrapper {
   @include laptop {
+    display: none;
+  }
+
+  @include mobile {
     display: none;
   }
 }

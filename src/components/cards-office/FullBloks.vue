@@ -60,19 +60,48 @@
     </div>
 </template>
 
-<style setup lang="scss">
+<style scoped lang="scss">
+  @use '@/assets/styles/mixins' as *;
+
   .FullBlocks{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
     width: 100%;
-    justify-content: space-between;
-    max-width: 1250px;
+    max-width: 1128px;
+    align-items: start;
+
+    @include laptop {
+      display: block;
+      max-width: 100%;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   .blok_saka_und_slider {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 200px;
-    gap: 220px;
+    display: contents;
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+
+      &:nth-child(n + 2) {
+        display: none;
+      }
+    }
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+
+      &:nth-child(n + 2) {
+        display: none;
+      }
+    }
   }
 </style>
