@@ -25,10 +25,24 @@ defineProps<{
 <style lang="scss">
     .FooterBigBlock{
         width: 100%;
-        height: 100%;
-        
+        max-height: 250px;
+        max-width: 500px;
+        @include laptop{
+            max-width: 100%;
+        }
+        .InputContainer{
+            width: 100%;
+        }
         .CallContainer{
             align-self: flex-end;
+            @include laptop{
+                align-self: self-start;
+                padding-top: 20px;
+            }
+            @include mobile{
+                align-self: self-start;
+                padding-top: 20px;
+            }
         }
         .container{
             width: 100%;

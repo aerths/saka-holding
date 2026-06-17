@@ -38,8 +38,13 @@ defineProps<{
                 max-width: 237px;
                 }
                 &--WB {
-                width: 440px;
+                max-width: 440px;
+                width: 100%;
                 border-radius: 50px;
+                @include laptop{
+                    min-width: 300px;
+                    max-width: 100%;
+                }
                 }
                 
             }

@@ -25,6 +25,12 @@ import FooterIcons from '@/components/footer/FooterIcons.vue';
         
         font-weight: SemiBold;
         font-size: 16px;
+        container{
+            @include mobile{
+                flex-direction: column;
+                align-items: self-start;
+            }
+        }
         h2{
             margin-right: 25px;
         }
@@ -32,6 +38,9 @@ import FooterIcons from '@/components/footer/FooterIcons.vue';
             font-weight: regular;
             font-size: 14;
             color: #ffffff80;
+        }
+        @include mobile{
+            flex-direction: column;
         }
     }
 

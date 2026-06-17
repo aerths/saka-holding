@@ -29,9 +29,9 @@ import FooterBlock from '@/components/footer/FooterBlock.vue';
                 
                 />
             </div>
-            <div class="container">
+            
                 <FooterBigBlock />
-            </div>
+            
         </div>
 </template>
 
@@ -46,8 +46,19 @@ import FooterBlock from '@/components/footer/FooterBlock.vue';
             justify-content: space-between;
             .container{
             flex-direction: column;
-        }
-            
+            @include mobile{
+
+                align-items: self-start;
+            }
+            }
+            @include mobile{
+                flex-direction: column;
+                justify-content: start;
+            }
+            @include laptop{
+                gap:40px;
+                flex-wrap: wrap;
+            }
         }
 
         

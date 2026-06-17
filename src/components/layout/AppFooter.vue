@@ -19,6 +19,7 @@ import FooterBottom from '@/components/footer/FooterBottom.vue';
         min-height: 474px;
         color: #FFF;
         justify-content: space-between;
+        padding: 40px clamp(24px, 6vw, 120px);
         
     }
 </style>
