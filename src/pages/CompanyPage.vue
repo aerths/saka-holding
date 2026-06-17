@@ -5,6 +5,7 @@ import FullBlockTekstil from '../components/CompanyTekstil/FullBlockTekstil.vue'
 import certificates from '../components/certificates/certificates.vue';
 import RecentlyViewed from '@/components/RecentlyViewed/RecentlyViewed.vue';
 import block3person from '@/components/block3person/block3person.vue';
+import fullsection from '@/components/sixblockcompany/fullsection.vue';
 </script>
 
 <template>
@@ -21,9 +22,9 @@ import block3person from '@/components/block3person/block3person.vue';
         <div class="Container-Block">
             <FullBlockTekstil />
         </div>
-        <!-- <div class="Container-Block">
-            фиолетовый бэкграунд
-        </div> -->
+        <div class="Container-Block">
+            <fullsection />
+        </div>
         <div class="Container-Block">
             <certificates />
         </div>
@@ -37,8 +38,8 @@ import block3person from '@/components/block3person/block3person.vue';
 </template>
 
 <style setup lang="scss"> 
-    .Container-Block:nth-child(4),
-    .Container-Block:nth-child(6){
+    .Container-Block:nth-child(5),
+    .Container-Block:nth-child(7){
             padding-left: 180px;
             padding-right: 180px;
         }
