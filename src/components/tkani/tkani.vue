@@ -17,8 +17,6 @@ import cloth6 from '@/assets/images/cloth/from-p1/cloth6.png';
         <tkan :image='cloth1' Btext="Футер 3-х Нитка"/>
         <tkan :image='cloth2' Btext="Френч Терри"/>
         <tkan :image='cloth3' Btext="Вискоза"/>
-    </div>
-    <div class="container">
         <tkan :image='cloth4' Btext="Пике"/>
         <tkan :image='cloth5' Btext="Кулинарная гладь"/>
         <tkan :image='cloth6' Btext="Бифлекс"/>
@@ -39,13 +37,26 @@ import cloth6 from '@/assets/images/cloth/from-p1/cloth6.png';
     gap: 30px;
     .TextCon{
       max-width: 40%;
+      padding-left: 40px;
       color: #FFF;
+      @include laptop{
+          max-width: 60%;
+          padding-left: 21px;
+        }
+      @include laptop{
+          max-width: 100%;
+        }
     }
     .container{
         flex-direction: row;
         width: 100%;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 40px;
+        @include laptop{
+          gap: 21px;
+        }
     }
   }
 </style>
