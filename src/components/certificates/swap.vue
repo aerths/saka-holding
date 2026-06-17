@@ -7,15 +7,16 @@ defineProps<{
 
 
 <template>
-    <div class="swap" :class="`swap--${theme}`">
+    <button class="swap" :class="`swap--${theme}`">
         <img src="../../assets/icons/swap/ArrowLeft.svg">
-    </div>
+    </button>
 </template>
 
 
 
 <style setup lang="scss">
     .swap{
+        border: none;
         display: flex;
         align-items: center;
         justify-content: center;

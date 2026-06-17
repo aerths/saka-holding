@@ -14,7 +14,7 @@ import Button from '@/components/ui/Button.vue';
             <Input theme="default" text="Ваше имя"/>
             <Input theme="default" text="+7 (___) ___-__-__"/>
             <Input theme="default" text="Ваш E-mail"/>
-            <Button theme="icon" text="Отправить" />
+            <Button id='Inp' theme="icon" text="Отправить" />
         </div>
         <a>Нажимая на кнопку вы даете свое согласие на обработку персональных данных. Гарантируем! Спама не будет!</a>
     </div>
@@ -25,7 +25,8 @@ import Button from '@/components/ui/Button.vue';
 <style setup lang="scss">
 .form{
     width: 100%;
-    height: 330px;
+    height: 100%;
+    min-height: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +36,11 @@ import Button from '@/components/ui/Button.vue';
     border-radius: 16px;
     text-align: center;
     justify-content: space-between;
+
+    @include laptop{
+        min-height: 660px;
+        padding: 60px;
+    }
     a{
             font-size: 12px;
             font-weight: Regular;
@@ -43,15 +49,24 @@ import Button from '@/components/ui/Button.vue';
     .container{
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         max-width: 1400px;
+        gap: 16px;
+        @include laptop{
+            flex-direction: column;
+            justify-content: start;
+            gap: 15px;
+        }
     }
     .TextForm{
         display: flex;
         flex-direction: column;
         padding: 0px 18%;
         gap: 18px;
+        @include laptop{
+            padding: 0;
+        }
         h1{
         font-size: 26px;
         font-weight: SemiBold;
