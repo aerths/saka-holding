@@ -53,8 +53,6 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
             :image="lightblue"
             text="A-107 Blue"
             />
-        </div>
-        <div class="part_block_clothes">
             <tshort 
             :image="lightlightblue"
             text="A-118 Light Blue"
@@ -112,8 +110,6 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
             :image="lightblue"
             text="A-107 Blue"
             />
-        </div>
-        <div class="part_block_clothes">
             <tshort 
             :image="lightlightblue"
             text="A-118 Light Blue"
@@ -146,7 +142,7 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
     .full_block_clothes {
         display: flex;
         flex-direction: column;
-       
+        max-width: 1400px;
         gap: 67px;
     }
 
@@ -154,6 +150,7 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
         display: flex;
         flex-direction: row;
         gap: 90px;
+        flex-wrap: wrap;
     }
 
     .full_error_clothes {
@@ -161,6 +158,9 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
         flex-direction: row;
         max-width: 1230px;
         gap: 40px;
+        @include laptop{
+            flex-direction: column;
+        }
     }
 
     .error_clothes {

@@ -7,13 +7,17 @@ defineProps<{
 
 <template>
     <div class="certificate">
-        <img :src="image" width="360px" height="504px">
+        <img :src="image">
     </div>
 </template>
 
 
 
 <style setup lang="scss">
-    
+    .certificate{
+        img{
+            object-fit: cover;
+        }
+    }
     
 </style>

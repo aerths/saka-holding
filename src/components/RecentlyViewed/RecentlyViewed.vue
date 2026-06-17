@@ -15,10 +15,13 @@ import swap from '@/components/certificates/swap.vue';
         </div>
         <div class="container">
         <swap theme="left-light"/>
-        <Glad :image="glad1" price="11,4$" size="180 см"/>
-        <Glad :image="glad2" price="13$" size="180 см"/>
-        <Glad :image="glad3" price="122,4$" size="180 см"/>
-        <Glad :image="glad4" price="13,84$" size="180 см"/>
+        <div class="sliddder">
+            <Glad :image="glad1" price="11,4$" size="180 см"/>
+            <Glad :image="glad2" price="13$" size="180 см"/>
+            <Glad :image="glad3" price="122,4$" size="180 см"/>
+            <Glad :image="glad4" price="13,84$" size="180 см"/>
+            
+        </div>
         <swap theme="right-light"/>
         </div>
     </div>
@@ -41,8 +44,16 @@ import swap from '@/components/certificates/swap.vue';
             width: 100%;
             align-items: center;
             justify-content: space-between;
-            
+            .sliddder{
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+            gap: 40px;
+            align-items: center;
+            overflow: hidden;
         }
+        }
+        
         
     }
 </style>

@@ -11,9 +11,11 @@
         <h1>Saka Tekstil дорожит своей репутацией</h1>
         <div class="container">
             <swap theme="left"/>
-            <certificate :image="sert1"/>
-            <certificate :image="sert2"/>
-            <certificate :image="sert3"/>
+            <div class="sliddder">
+                <certificate :image="sert1"/>
+                <certificate :image="sert2"/>
+                <certificate :image="sert3"/>
+            </div>
             <swap theme="right"/>
         </div>
     </div>
@@ -33,6 +35,16 @@
     .container{
         width: 100%;
         justify-content: space-between;
+    }
+    .sliddder{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        overflow: hidden;
+        width: 80%;
+        @include laptop{
+            max-width: 360px;
+        }
     }
   }
 </style>

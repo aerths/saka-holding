@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button.vue';
 </script>
 
 <template>
-<div class="catalog">
+<div class="catalogg">
     <div class="img_catalog">
         <img src="../../assets/images/large_images/SAKA-tower.png" alt="">
     </div>
@@ -35,31 +35,40 @@ import Button from '@/components/ui/Button.vue';
 
 <style setup lang="scss">
 @use '@/assets/styles/mixins' as *;
-    .catalog{
+    .catalogg{
         max-width: 1400px;
         max-height: 639px;
         display: flex;
         flex-direction: row;
-        gap: 100px;
+        justify-content: space-between;
         @include laptop{
-            background-color: black;
+            flex-direction: column-reverse;
+            max-height: 1200px;
+            gap: 0;
+            align-items: center;
+        }
+        .btn_catalog{
+            @include laptop{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         }
 
         .blok_yellow {
         background-color: var(--accent-color);
         width: 80px;
         height: 4px;
-        margin-right: 20px;
+        margin-right: 5%;
         align-self: flex-start;
-        margin-top: 25px;
-
-        
-    }
+        margin-top: 5%;
+        }
     .container{
-        max-width: 440px;
+  
         p{
             font-weight: Regular;
-            font-size: 18px;
+            font-size: 14px;
         }
     }
     .title_catalog_color {
@@ -70,16 +79,16 @@ import Button from '@/components/ui/Button.vue';
     .title_catalog {
         display: flex;
         flex-direction: column;
-        padding: 89px 0px;
+        padding: 5% 5%;
         justify-content: space-between;
         @include laptop{
-           
+           align-items: center;
         }
     }
     .one_title_catalog {
         h2{
             font-weight: SemiBold;
-            font-size: 26px;
+            font-size: 22px;
         }
         max-width: 83%;
     }
