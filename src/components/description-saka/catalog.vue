@@ -34,12 +34,16 @@ import Button from '@/components/ui/Button.vue';
 </template>
 
 <style setup lang="scss">
+@use '@/assets/styles/mixins' as *;
     .catalog{
         max-width: 1400px;
+        max-height: 639px;
         display: flex;
         flex-direction: row;
         gap: 100px;
-        background-color: var(--bg-gray-color);
+        @include laptop{
+            background-color: black;
+        }
 
         .blok_yellow {
         background-color: var(--accent-color);
@@ -61,13 +65,16 @@ import Button from '@/components/ui/Button.vue';
     .title_catalog_color {
         color: var(--accent-color);
     }
-    }
+    
     
     .title_catalog {
         display: flex;
         flex-direction: column;
         padding: 89px 0px;
         justify-content: space-between;
+        @include laptop{
+           
+        }
     }
     .one_title_catalog {
         h2{
@@ -76,4 +83,5 @@ import Button from '@/components/ui/Button.vue';
         }
         max-width: 83%;
     }
+}
 </style>

@@ -40,6 +40,10 @@ defineProps<{
     &--icon{
       max-width: 285px;
       justify-content: space-between;
+      @include laptop{
+        max-width: 500px;
+        width: 100%;
+                }
     }
   }
 </style>

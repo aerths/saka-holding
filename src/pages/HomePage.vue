@@ -21,7 +21,7 @@
         <div class="Container-Block" id="black">
             <tkani />
         </div>
-        <div class="Container-Block">
+        <div class="Container-Block" id="gray">
             <catalog />
         </div>
         <div class="Container-Block">

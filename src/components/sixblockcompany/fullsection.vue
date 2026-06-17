@@ -59,5 +59,6 @@ import heart from '@/assets/icons/sixiconsaboutcompany/heart.svg';
         width: 100%;
         height: 1066px;
         height: 100%;
+        
     }
 </style>
