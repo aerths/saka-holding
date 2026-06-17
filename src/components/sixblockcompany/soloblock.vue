@@ -25,9 +25,11 @@ defineProps<{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .task_image {
-            width: 64px;
-            height: 64px;
-        }
+        background-color: var(--bg-color);
+    }
+
+    .task_image {
+        width: 64px;
+        height: 64px;
     }
 </style>

@@ -1,4 +1,4 @@
-<script>
+<script setup lang="ts">
 import soloblock from '@/components/sixblockcompany/soloblock.vue';
 // import purpletkani from '@/assets/images/perpletkani.png';
 import zavod from '@/assets/icons/sixiconsaboutcompany/zavod.svg';
@@ -52,12 +52,17 @@ import heart from '@/assets/icons/sixiconsaboutcompany/heart.svg';
     </section>
 </template>
 
-<style>
+<style setup lang="scss">
     .full_section {
         background-color: var(--bg-gray-color);
         max-width: 1400px;
         width: 100%;
         height: 1066px;
         height: 100%;
+        padding: 100px 120px;
+    }
+
+    .title_section {
+        max-width: 860px;
     }
 </style>
