@@ -34,7 +34,7 @@ defineProps<{
         max-width: 1400px;
         align-items: flex-start;
         a{
-            color: rgba(0, 0, 0, 0.459);
+            color: var(--muted-text-color);
         }
     }
 

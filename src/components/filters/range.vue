@@ -29,7 +29,7 @@
             span{
                 font-size: 10px;
                 font-weight: Medium;
-                color: rgba(0, 0, 0, 0.493);
+                color: var(--muted-text-color);
             }
         }
         input{

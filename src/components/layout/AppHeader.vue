@@ -98,13 +98,17 @@ const isMenuOpen = ref(false);
     gap: 18px;
 
     @include laptop {
-      gap: 0;
+      gap: 14px;
+    }
+
+    @include mobile {
+      gap: 10px;
     }
   }
 
   .a-text {
     font-weight: light;
-    color: #ffffffd2;
+    color: #D4D7D9;
   }
 
   .text_header {
@@ -156,13 +160,13 @@ const isMenuOpen = ref(false);
   }
 
   @include laptop {
-    .header__actions > :not(.menu-toggle) {
+    .header__actions > :not(.menu-toggle):not(.lang) {
       display: none;
     }
   }
 
   @include mobile {
-    .header__actions > :not(.menu-toggle) {
+    .header__actions > :not(.menu-toggle):not(.lang) {
       display: none;
     }
   }

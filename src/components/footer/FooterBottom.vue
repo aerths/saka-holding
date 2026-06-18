@@ -37,7 +37,7 @@ import FooterIcons from '@/components/footer/FooterIcons.vue';
         a{
             font-weight: regular;
             font-size: 14;
-            color: #ffffff80;
+            color: #8C9297;
         }
         @include mobile{
             flex-direction: column;

@@ -72,7 +72,7 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             
  
             h4{
-                color: black;
+                color: var(--text-color);
                 font-size: 12px;
                 font-weight: 500;
             }

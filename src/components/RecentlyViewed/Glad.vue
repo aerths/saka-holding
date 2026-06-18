@@ -30,7 +30,7 @@ defineProps<{
 
 <style setup lang="scss">
     .Glad{
-        background-color: #FFF;
+        background-color: var(--card-bg-color);
         display: flex;
         flex-direction: column;
         align-items: stretch;
@@ -91,7 +91,7 @@ defineProps<{
             a{
                 font-size: clamp(10px, 1vw, 12px);
                 font-weight: 500;
-                color: #19242f7e;
+                color: var(--muted-text-color);
                 margin: 0;
             }
         }

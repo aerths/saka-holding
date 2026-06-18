@@ -40,8 +40,7 @@ import tekstillOpenend from '../../assets/images/tekstillOpenend.png'
 
     .title_saka_tekstil {
         max-width: 500px;
-        color: #000;
-        opacity: 50%;
+        color: var(--muted-text-color);
     }
 
     .full_block_texstill {

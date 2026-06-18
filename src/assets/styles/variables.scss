@@ -1,9 +1,12 @@
 :root {
     --bg-color: #ffffff;
-    --bg-duo-color: rgb(255, 255, 255, 25%);
+    --bg-duo-color: #535B63;
     --main-color: #19242F;
     --second-main-color: #233240;
     --accent-color: #DBC08D;
+    --text-color: #19242F;
+    --muted-text-color: #858A8F;
+    --card-bg-color: #ffffff;
     --font-family: 'Calibri', sans-serif;
     --bg-gray-color: #f8f8f8;
 
@@ -19,4 +22,16 @@
 
     --border-radius-xs: 6px;
 
+}
+
+:root[data-theme='dark'] {
+    --bg-color: #101820;
+    --bg-duo-color: #74787C;
+    --main-color: #0B1118;
+    --second-main-color: #172331;
+    --accent-color: #DBC08D;
+    --text-color: #F3F5F7;
+    --muted-text-color: #9A9FA5;
+    --card-bg-color: #182330;
+    --bg-gray-color: #121D27;
 }

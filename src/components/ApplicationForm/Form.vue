@@ -44,7 +44,7 @@ import Button from '@/components/ui/Button.vue';
     a{
             font-size: 12px;
             font-weight: Regular;
-            color: #ffffff33;
+            color: #AEB5BC;
         }
     .container{
         flex-direction: row;

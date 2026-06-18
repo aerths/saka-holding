@@ -48,6 +48,7 @@ const bonds = [
     min-height: 50px;
     padding: 0 clamp(24px, 6vw, 120px);
     background-color: var(--main-color);
+    color: #fff;
 
     .container {
         display: flex;
@@ -80,12 +81,11 @@ const bonds = [
     @include mobile {
         display: none;
     }
-}
-
-h4 {
-    margin: 0;
-    color: #fff;
-    font-size: 10px;
-    line-height: 1.2;
+    h4 {
+        margin: 0;
+        color: #fff;
+        font-size: 10px;
+        line-height: 1.2;
+    }
 }
 </style>

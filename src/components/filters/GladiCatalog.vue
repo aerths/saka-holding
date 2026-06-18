@@ -72,7 +72,7 @@ import glad4 from '@/assets/images/glad/glad-green.png';
             a{
                 font-size: 10px;
                 font-weight: Medium;
-                color: rgba(0, 0, 0, 0.493);
+                color: var(--muted-text-color);
             }
             h2{
                 font-size: 14px;

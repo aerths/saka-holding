@@ -72,16 +72,17 @@ import person from './person.vue'
 
 .btn_title_person {
     button {
-        background-color: #e6e6e6;
+        background-color: var(--bg-gray-color);
         border: none;
         border-radius: 30px;
         padding: 12px 32px;
         font-size: 18px;
         font-weight: 500;
+        color: var(--text-color);
         cursor: pointer;
 
         &:hover {
-            background-color: #d4d4d4;
+            background-color: var(--card-bg-color);
         }
     }
 }

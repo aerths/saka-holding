@@ -124,7 +124,7 @@ onBeforeUnmount(() => {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        background-color: #FFF;
+        background-color: var(--card-bg-color);
         width: 260px;
 
         @include laptop{
@@ -150,7 +150,7 @@ onBeforeUnmount(() => {
                 a{
                     font-size: 10px;
                     font-weight: 500;
-                    color: rgba(0, 0, 0, 0.514);
+                    color: var(--muted-text-color);
                 }
             }
         }
@@ -167,7 +167,7 @@ onBeforeUnmount(() => {
             span{
                 font-size: 10px;
                 font-weight: 500;
-                color: rgba(0, 0, 0, 0.514);
+                color: var(--muted-text-color);
             }
         }
 

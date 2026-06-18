@@ -48,7 +48,7 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             max-height: 30px;
  
             h4{
-                color: black;
+                color: var(--text-color);
                 font-size: 12px;
                 font-weight: 500;
             }
@@ -58,7 +58,7 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
-            background-color: #FFF;
+            background-color: var(--card-bg-color);
             
             
         }
