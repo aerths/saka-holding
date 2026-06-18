@@ -8,7 +8,7 @@ import CatalogPage from "../pages/CatalogPage.vue"
 import CompanyPage from "../pages/CompanyPage.vue"
 
 export const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         { path: '/', component: HomePage},
         { path: '/about', component: CompanyPage},

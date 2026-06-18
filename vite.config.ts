@@ -3,8 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import path from 'node:path'
 import svgLoader from 'vite-svg-loader'
 
-export default defineConfig({
-  base: '/saka-holding/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/saka-holding/' : '/',
   plugins: [vue(), svgLoader({ defaultImport: 'url' })],
   resolve: {
     alias: {
@@ -21,4 +21,4 @@ export default defineConfig({
       },
     },
   },
-})
+}))
