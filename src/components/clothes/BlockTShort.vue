@@ -142,24 +142,33 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
     .full_block_clothes {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
         max-width: 1400px;
+        margin: 0 auto;
         gap: 67px;
     }
 
     .part_block_clothes {
         display: flex;
         flex-direction: row;
-        gap: 90px;
+        justify-content: center;
+        width: 100%;
+        gap: clamp(24px, 6vw, 90px);
         flex-wrap: wrap;
     }
 
     .full_error_clothes {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        width: 100%;
         max-width: 1230px;
         gap: 40px;
         @include laptop{
             flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
 

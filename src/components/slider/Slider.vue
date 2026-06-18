@@ -115,7 +115,7 @@ onBeforeUnmount(stopSlider)
     &__card {
         position: relative;
         width: 100%;
-        max-width: 1400px;
+        max-width: 1150px;
         height: 438px;
         margin: 0 auto;
         overflow: visible;

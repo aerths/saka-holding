@@ -19,15 +19,27 @@ import GladiCatalog from '@/components/filters/GladiCatalog.vue';
         flex-direction: column;
         max-width: 1300px;
         width: 100%;
+        gap: 24px;
         
         .container67{
             display: flex;
             flex-direction: row;
             align-items: start;
             justify-content: space-between;
+            gap: 40px;
+            width: 100%;
+
+            @include laptop{
+                flex-direction: column;
+                gap: 20px;
+            }
         }
         .TextCont{
             max-width: 60%;
+
+            @include laptop{
+                max-width: 100%;
+            }
         }
         
     }

@@ -38,15 +38,20 @@ import Button from '@/components/ui/Button.vue';
     .catalogg{
         width: 100%;
         max-width: 1400px;
-        max-height: 639px;
         display: flex;
         flex-direction: row;
         align-items: stretch;
         justify-content: space-between;
+        gap: 32px;
+
         @include laptop{
             flex-direction: column-reverse;
-            gap: 0;
+            gap: 32px;
             align-items: center;
+        }
+
+        @include mobile{
+            gap: 24px;
         }
 
         .img_catalog{
@@ -67,11 +72,6 @@ import Button from '@/components/ui/Button.vue';
                 width: 100%;
                 max-width: 560px;
                 flex-basis: auto;
-                padding-top: 32px;
-            }
-
-            @include mobile{
-                padding-top: 24px;
             }
         }
 
@@ -135,11 +135,11 @@ import Button from '@/components/ui/Button.vue';
         @include laptop{
            align-items: center;
            width: 100%;
-           padding: 32px 0 0;
+           padding: 0;
         }
 
         @include mobile{
-           padding-top: 24px;
+           padding: 0;
         }
     }
     .one_title_catalog {

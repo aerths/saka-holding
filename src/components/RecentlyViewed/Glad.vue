@@ -33,51 +33,66 @@ defineProps<{
         background-color: #FFF;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         width: 100%;
         max-width: 260px;
         min-width: 0;
-        height: auto;
         min-height: 360px;
-        
         border-radius: 16px;
 
         > img{
             display: block;
             width: 100%;
-            max-width: 260px;
-            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 16px 16px 0 0;
         }
         
         .BT{
-            width: 80%;
-            margin-bottom: 11px;
+            width: 200px;
+            max-width: 80%;
+            margin: auto auto 11px;
+
+            .button{
+                width: 200px;
+                max-width: 100%;
+                min-height: 53px;
+                max-height: 53px;
+                padding: 0 17px;
+                font-size: 16px;
+
+                img{
+                    width: 16px;
+                    height: 16px;
+                }
+            }
         }
         .TextCon{
             display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            padding: 22px 10% 11px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+            padding: 18px 10% 14px;
             width: 100%;
-            text-align: center;
+            text-align: left;
             h2{
-            margin: 6px;
-            font-size: clamp(18px, 1.5vw, 22px);
-            font-weight: SemiBold;
+                margin: 0;
+                font-size: clamp(18px, 1.5vw, 22px);
+                font-weight: 600;
+                line-height: 1.15;
             }
             h3{
-            
-            margin: 6px;
-            font-size: clamp(15px, 1.25vw, 18px);
-            font-weight: SemiBold;
+                margin: 0;
+                min-height: 38px;
+                font-size: clamp(15px, 1.25vw, 18px);
+                font-weight: 600;
+                line-height: 1.2;
             }
             a{
                 font-size: clamp(10px, 1vw, 12px);
-                font-weight: Medium;
+                font-weight: 500;
                 color: #19242f7e;
-                align-self: last baseline;
-                margin-left: 8%;
-                margin-bottom: 5%
+                margin: 0;
             }
         }
         
