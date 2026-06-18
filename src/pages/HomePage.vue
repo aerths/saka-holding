@@ -54,17 +54,5 @@
         .Container-Block:nth-child(1){
             padding-bottom: 0px;
         }
-        .Container-Block:nth-child(5), 
-        .Container-Block:nth-child(8){
-            padding-left: 180px;
-            padding-right: 180px
-        }
-
-        .Container-Block:nth-child(8){
-            @include mobile{
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-        }
     }
 </style>

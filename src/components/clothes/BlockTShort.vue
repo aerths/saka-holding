@@ -169,5 +169,8 @@ import lightlightblue from '@/assets/icons/colorclothes/lightlightblue.png';
         justify-content: center;
         align-items: center;
         gap: 30px;
+        @include mobile{
+            display: none;
+        }
     }
 </style>
