@@ -12,7 +12,7 @@ defineProps<{
             <img :src="image" alt="">
         </div>
         <div class="title_task">
-            {{title}}
+            <h3>{{title}}</h3>
         </div>
         <div class="text_task">
             {{text}}
@@ -25,9 +25,15 @@ defineProps<{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .task_image {
-            width: 64px;
-            height: 64px;
-        }
+        background-color: var(--bg-color);
+        border-radius: 16px;
+        max-width: 260px;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .task_image {
+        width: 64px;
+        height: 64px;
     }
 </style>

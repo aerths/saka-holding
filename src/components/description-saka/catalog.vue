@@ -38,6 +38,7 @@ import Button from '@/components/ui/Button.vue';
     .catalogg{
         width: 100%;
         max-width: 1400px;
+        max-height: 639px;
         display: flex;
         flex-direction: row;
         align-items: stretch;

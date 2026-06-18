@@ -27,11 +27,6 @@ defineProps<{
     flex-direction: column;
     justify-content: space-between;
     border-radius: 16px;
-    transition: transform 0.2s ease;
-
-    &:hover {
-        transform: translateY(-4px);
-    }
 }
 
 .text_opisanie {
