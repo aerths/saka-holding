@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
 </script>
 <template>
     <div class="type">
         <div class="TextCon">
             <h3>Тип полотна</h3>
-            <img src="../../assets/icons/CaretRight.svg">
+            <img :src="caretRightIcon" alt="">
         </div>
     </div>    
     

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-
+import shoppingCartIcon from '@/assets/icons/ShoppingCart.svg?url';
 </script>
 
 <template>
     <div class="basket">
-        <img src="../../assets/icons/ShoppingCart.svg" alt="">
+        <img :src="shoppingCartIcon" alt="">
         <div class="push">
             3
         </div>

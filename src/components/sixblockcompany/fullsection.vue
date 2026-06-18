@@ -1,12 +1,12 @@
-<script>
+<script setup lang="ts">
 import soloblock from '@/components/sixblockcompany/soloblock.vue';
 // import purpletkani from '@/assets/images/perpletkani.png';
-import zavod from '@/assets/icons/sixiconsaboutcompany/zavod.svg';
-import sklad from '@/assets/icons/sixiconsaboutcompany/sklad.svg';
-import medal from '@/assets/icons/sixiconsaboutcompany/medal.svg';
-import kristall from '@/assets/icons/sixiconsaboutcompany/kristall.svg';
-import kofta from '@/assets/icons/sixiconsaboutcompany/kofta.svg';
-import heart from '@/assets/icons/sixiconsaboutcompany/heart.svg';
+import zavod from '@/assets/icons/sixiconsaboutcompany/zavod.svg?url';
+import sklad from '@/assets/icons/sixiconsaboutcompany/sklad.svg?url';
+import medal from '@/assets/icons/sixiconsaboutcompany/medal.svg?url';
+import kristall from '@/assets/icons/sixiconsaboutcompany/kristall.svg?url';
+import kofta from '@/assets/icons/sixiconsaboutcompany/kofta.svg?url';
+import heart from '@/assets/icons/sixiconsaboutcompany/heart.svg?url';
 </script>
 
 <template>

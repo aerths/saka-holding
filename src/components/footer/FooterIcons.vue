@@ -1,13 +1,16 @@
 <script setup lang="ts">
-
+import vkIcon from '@/assets/icons/footer/VK.svg?url';
+import whatsappIcon from '@/assets/icons/footer/WhatsApp.svg?url';
+import telegramIcon from '@/assets/icons/footer/Telegram.svg?url';
+import instagramIcon from '@/assets/icons/footer/Instagram.svg?url';
 </script>
 
 <template>
     <div class="FooterIcons">
-        <img src="../../assets/icons/footer/VK.svg">
-        <img src="../../assets/icons/footer/WhatsApp.svg">
-        <img src="../../assets/icons/footer/Telegram.svg">
-        <img src="../../assets/icons/footer/Instagram.svg">
+        <img :src="vkIcon" alt="">
+        <img :src="whatsappIcon" alt="">
+        <img :src="telegramIcon" alt="">
+        <img :src="instagramIcon" alt="">
     </div>
             
 </template>

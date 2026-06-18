@@ -1,12 +1,12 @@
-<template>
-<div class="arrow">
-    <img src="../../assets/icons/arrow.svg" alt="" width="24px">
-</div>
-</template>
-
-<script>
-
+<script setup lang="ts">
+import arrowIcon from '@/assets/icons/arrow.svg?url';
 </script>
+
+<template>
+    <div class="arrow">
+        <img :src="arrowIcon" alt="" width="24px">
+    </div>
+</template>
 
 <style>
     .arrow {

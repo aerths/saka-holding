@@ -1,13 +1,16 @@
+<script setup lang="ts">
+import sakaLogo from '@/assets/icons/SAKA-LOGO.svg?url';
+import erosLogo from '@/assets/icons/EROS.svg?url';
+import tortexLogo from '@/assets/icons/TORTEX.svg?url';
+</script>
+
 <template>
     <div class="icons_logo">
-        <img src="../../assets/icons/SAKA-LOGO.svg" alt="">
-        <img src="../../assets/icons/EROS.svg" alt="">
-        <img src="../../assets/icons/TORTEX.svg" alt="">
+        <img :src="sakaLogo" alt="">
+        <img :src="erosLogo" alt="">
+        <img :src="tortexLogo" alt="">
     </div>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 @use '@/assets/styles/mixins' as *;

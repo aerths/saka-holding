@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import arrowRightIcon from '@/assets/icons/ArrowRight.svg?url';
+
 defineProps<{
   text:string
   theme: 'default' | 'icon' | 'square'
@@ -8,7 +10,7 @@ defineProps<{
 <template>
   <button class="button" :class="`button--${theme}`">
     <span>{{text}}</span>
-    <img v-if="theme === 'icon'" src="../../assets/icons/ArrowRight.svg">
+    <img v-if="theme === 'icon'" :src="arrowRightIcon" alt="">
   </button>
 </template>
 

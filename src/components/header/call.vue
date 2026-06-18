@@ -1,7 +1,11 @@
+<script setup lang="ts">
+import phoneCallIcon from '@/assets/icons/PhoneCall.svg?url';
+</script>
+
 <template>
     <div class="call">
         <div class="phone_number">
-            <img src="../../assets/icons/PhoneCall.svg" alt="">
+            <img :src="phoneCallIcon" alt="">
             <h2>+90 212 547 08 26</h2>
         </div>
         <div class="second_line_text">
@@ -9,9 +13,6 @@
         </div>
     </div>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 @use '@/assets/styles/mixins' as *;

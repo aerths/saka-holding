@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import logo from '@/assets/images/logo.svg?url';
+</script>
+
 <template>
     <RouterLink to="/" class="logo">
-        <img src="./../../assets/images/logo.svg" alt="Saka-Holding">
+        <img :src="logo" alt="Saka-Holding">
     </RouterLink>
 </template>
 

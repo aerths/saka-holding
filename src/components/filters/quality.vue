@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
 </script>
 <template>
     <div class="quality">
         <div class="TextCon">
             <h3>Качество</h3>
-            <img src="../../assets/icons/CaretRight.svg">
+            <img :src="caretRightIcon" alt="">
         </div>
         
         

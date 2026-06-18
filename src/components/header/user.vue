@@ -1,12 +1,13 @@
+<script setup lang="ts">
+import userIcon from '@/assets/icons/User.svg?url';
+</script>
+
 <template>
     <div class="user">
-        <img src="../../assets/icons/User.svg" alt="">
+        <img :src="userIcon" alt="">
         <span>Войти</span>
     </div>
 </template>
-
-<script>
-</script>
 
 <style lang="scss">
 .user {

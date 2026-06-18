@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import arrowLeftIcon from '@/assets/icons/swap/ArrowLeft.svg?url';
+
 withDefaults(defineProps<{
   theme: 'left-light' | 'right-light' | 'left' | 'right' | "square-left" | "square-right"
   color?: string
@@ -12,7 +14,7 @@ withDefaults(defineProps<{
 
 <template>
     <button class="swap" :class="`swap--${theme}`" type="button" :aria-label="ariaLabel">
-        <img src="../../assets/icons/swap/ArrowLeft.svg" alt="">
+        <img :src="arrowLeftIcon" alt="">
     </button>
 </template>
 

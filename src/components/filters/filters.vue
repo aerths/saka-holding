@@ -4,7 +4,9 @@ import type from '@/components/filters/type.vue';
 import colors from '@/components/filters/colors.vue';
 import colors2 from '@/components/filters/colors2.vue';
 import quality from '@/components/filters/quality.vue';
+import closeIcon from '@/assets/icons/X.svg?url';
 </script>
+
 <template>
     <div class="filters">
         <div class="TextCon">
@@ -14,7 +16,7 @@ import quality from '@/components/filters/quality.vue';
             </div>
             <div class="Con">
                 <a>СБРОСИТЬ</a>
-                <img src="../../assets/icons/X.svg"
+                <img :src="closeIcon" alt="">
             </div>
         </div>
         <range />
@@ -22,9 +24,9 @@ import quality from '@/components/filters/quality.vue';
         <quality />
         <colors />
         <colors2 />
-        
     </div>
 </template>
+
 <style setup lang="scss">
     .filters{
         display: flex;

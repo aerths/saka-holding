@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import crownIcon from '@/assets/icons/crown.svg?url';
 </script>
 
 <template>
@@ -24,7 +24,7 @@
         </div>
         <div class="worthiness">
             <div class="ellipce">
-                <img class="img_corow" src="../../assets/icons/crown.svg" alt="">
+                <img class="img_corow" :src="crownIcon" alt="">
                 <h1>
                     30
                 </h1>
@@ -33,7 +33,7 @@
                 </p>
             </div>
             <div class="ellipce">
-                <img class="img_corow" src="../../assets/icons/crown.svg" alt="">
+                <img class="img_corow" :src="crownIcon" alt="">
                 <h1>
                     40+
                 </h1>
@@ -42,7 +42,7 @@
                 </p>
             </div>
             <div class="ellipce">
-                <img class="img_corow" src="../../assets/icons/crown.svg" alt="">
+                <img class="img_corow" :src="crownIcon" alt="">
                     <h1>
                         10 000+
                     </h1>
