@@ -79,7 +79,6 @@ import person from './person.vue'
         font-size: 18px;
         font-weight: 500;
         cursor: pointer;
-        transition: background-color 0.2s ease;
 
         &:hover {
             background-color: #d4d4d4;
