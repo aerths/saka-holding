@@ -43,6 +43,12 @@ import fullsection from '@/components/sixblockcompany/fullsection.vue';
             padding-left: 180px;
             padding-right: 180px;
         }
+    .Container-Block:nth-child(7){
+            @include mobile{
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
     .Container-Block:nth-child(1){
             padding-bottom: 0;
         }

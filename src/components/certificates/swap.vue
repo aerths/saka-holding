@@ -1,14 +1,18 @@
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   theme: 'left-light' | 'right-light' | 'left' | 'right' | "square-left" | "square-right"
-  color: string
-}>()
+  color?: string
+  ariaLabel?: string
+}>(), {
+  color: undefined,
+  ariaLabel: undefined,
+})
 </script>
 
 
 <template>
-    <button class="swap" :class="`swap--${theme}`">
-        <img src="../../assets/icons/swap/ArrowLeft.svg">
+    <button class="swap" :class="`swap--${theme}`" type="button" :aria-label="ariaLabel">
+        <img src="../../assets/icons/swap/ArrowLeft.svg" alt="">
     </button>
 </template>
 

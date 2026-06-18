@@ -34,10 +34,20 @@ defineProps<{
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         max-width: 260px;
-        height: 436px;
+        min-width: 0;
+        height: auto;
+        min-height: 360px;
         
         border-radius: 16px;
+
+        > img{
+            display: block;
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+        }
         
         .BT{
             width: 80%;
@@ -48,21 +58,21 @@ defineProps<{
             flex-direction: row;
             flex-wrap: wrap;
             padding: 22px 10% 11px;
-            width: 260px;
+            width: 100%;
             text-align: center;
             h2{
             margin: 6px;
-            font-size: 22px;
+            font-size: clamp(18px, 1.5vw, 22px);
             font-weight: SemiBold;
             }
             h3{
             
             margin: 6px;
-            font-size: 18px;
+            font-size: clamp(15px, 1.25vw, 18px);
             font-weight: SemiBold;
             }
             a{
-                font-size: 12px;
+                font-size: clamp(10px, 1vw, 12px);
                 font-weight: Medium;
                 color: #19242f7e;
                 align-self: last baseline;

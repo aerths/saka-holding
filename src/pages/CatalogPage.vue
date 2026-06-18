@@ -32,6 +32,11 @@ import BigFilterBlock from '@/components/filters/BigFilterBlock.vue';
         .Container-Block:nth-child(2){
             padding-left: 180px;
             padding-right: 180px;
+
+            @include mobile{
+                padding-left: 8px;
+                padding-right: 8px;
+            }
         }
        
     }

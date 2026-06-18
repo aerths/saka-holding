@@ -15,7 +15,11 @@ defineProps<{
 
 <style setup lang="scss">
     .certificate{
+        width: 100%;
         img{
+            display: block;
+            width: 100%;
+            height: auto;
             object-fit: cover;
         }
     }

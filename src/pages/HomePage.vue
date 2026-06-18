@@ -59,5 +59,12 @@
             padding-left: 180px;
             padding-right: 180px
         }
+
+        .Container-Block:nth-child(8){
+            @include mobile{
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
     }
 </style>
