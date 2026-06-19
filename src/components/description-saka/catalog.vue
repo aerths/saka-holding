@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import Button from '@/components/ui/Button.vue';
+import PriceListPanel from '@/components/modals/PriceListPanel.vue';
+
+const isPriceListPanelOpen = ref(false);
 </script>
 
 <template>
@@ -27,10 +31,12 @@ import Button from '@/components/ui/Button.vue';
             <Button 
             text="Смотреть каталог"
             theme="icon"
+            @click="isPriceListPanelOpen = true"
             />
         </div>
     </div>
 </div>
+<PriceListPanel :is-open="isPriceListPanelOpen" @close="isPriceListPanelOpen = false" />
 </template>
 
 <style setup lang="scss">

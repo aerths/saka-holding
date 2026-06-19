@@ -8,11 +8,25 @@ import Navigator from '@/components/header/Navigator.vue';
 import Lang from '@/components/header/Lang.vue';
 import Bonds from '@/components/header/Bonds.vue';
 import basket from '@/components/header/basket.vue';
+import BasketPanel from '@/components/modals/BasketPanel.vue';
+import LoginPanel from '@/components/modals/LoginPanel.vue';
 
 const isMenuOpen = ref(false);
+const isBasketPanelOpen = ref(false);
+const isLoginPanelOpen = ref(false);
 
-watch(isMenuOpen, (isOpen) => {
-  document.body.style.overflow = isOpen ? 'hidden' : '';
+const openBasketPanel = () => {
+  isBasketPanelOpen.value = true;
+  isMenuOpen.value = false;
+};
+
+const openLoginPanel = () => {
+  isLoginPanelOpen.value = true;
+  isMenuOpen.value = false;
+};
+
+watch([isMenuOpen, isBasketPanelOpen, isLoginPanelOpen], ([isMenuOpenValue, isBasketPanelOpenValue, isLoginPanelOpenValue]) => {
+  document.body.style.overflow = isMenuOpenValue || isBasketPanelOpenValue || isLoginPanelOpenValue ? 'hidden' : '';
 });
 
 onBeforeUnmount(() => {
@@ -31,8 +45,8 @@ onBeforeUnmount(() => {
       </div>
     </div>
     <div class="container header__actions">
-      <basket />
-      <user />
+      <basket @click="openBasketPanel" />
+      <user @click="openLoginPanel" />
       <call />
       <Lang />
       <button
@@ -78,8 +92,8 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="navWrapper__actions">
-        <basket />
-        <user />
+        <basket @click="openBasketPanel" />
+        <user @click="openLoginPanel" />
       </div>
 
       <div class="navWrapper__bonds">
@@ -90,6 +104,8 @@ onBeforeUnmount(() => {
   <div class="bondsWrapper">
     <Bonds />
   </div>
+  <BasketPanel :is-open="isBasketPanelOpen" @close="isBasketPanelOpen = false" />
+  <LoginPanel :is-open="isLoginPanelOpen" @close="isLoginPanelOpen = false" />
 </template>
 
 <style lang="scss">

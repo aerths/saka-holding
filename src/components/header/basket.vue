@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import shoppingCartIcon from '@/assets/icons/ShoppingCart.svg?url';
+
+const emit = defineEmits<{
+    click: []
+}>();
 </script>
 
 <template>
-    <div class="basket">
+    <button class="basket" type="button" @click="emit('click')">
         <img :src="shoppingCartIcon" alt="">
         <div class="push">
             3
         </div>
-    </div>
+    </button>
 </template>
 
 <style lang="scss">
@@ -23,6 +27,8 @@ import shoppingCartIcon from '@/assets/icons/ShoppingCart.svg?url';
     background-color: var(--second-main-color);
     position: relative;
     cursor: pointer;
+    border: 0;
+    padding: 0;
 
     .push {
         background-color: var(--accent-color);

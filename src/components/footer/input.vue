@@ -2,14 +2,15 @@
 import Button from '@/components/ui/Button.vue';
 defineProps<{
   text: string
-  theme: 'default' | 'WB' 
+  theme: 'default' | 'WB'
+  inputType?: string
 }>()
 </script>
 
 <template>
   
         <div class="Email">
-            <input class="inp" :class="`inp--${theme}`" type="email" id="email" :placeholder="`${text}`" required>
+            <input class="inp" :class="`inp--${theme}`" :type="inputType || 'email'" :placeholder="`${text}`" required>
             <Button v-if="theme === 'WB'" theme="default" text="Отправить"/>
         </div>
 
