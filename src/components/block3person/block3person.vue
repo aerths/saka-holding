@@ -195,10 +195,6 @@ onBeforeUnmount(() => {
         border: 4px solid transparent;
     }
 
-    &--active :deep(.block_text_person){
-        border-color: #1E9BFF;
-    }
-
     @include mobile{
         max-width: 100%;
     }
