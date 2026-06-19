@@ -1,5 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
+
+const selectedColor = ref('');
+
+const colors = [
+    { name: 'Желтый', value: '#F5DC41' },
+    { name: 'Темно-зеленый', value: '#007C7A' },
+    { name: 'Синий', value: '#263669' },
+    { name: 'Темно-голубой', value: '#4A7AB8' },
+    { name: 'Красно-пурпурно-бордовый', value: '#B2092C' },
+    { name: 'Нежненький', value: '#B5A0C9' },
+];
 </script>
 <template>
     <div class="colors2">
@@ -7,32 +19,21 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             <h3>Цвет</h3>
             <img :src="caretRightIcon" alt="">
         </div>
-        
-        
-            <div class="container">
-                <div class="color" id="a"></div>
-                <h4>Желтый</h4>
-            </div>
-            <div class="container">
-                <div class="color" id="b"></div>
-                <h4>Темно-зеленый</h4>
-            </div>
-            <div class="container">
-                <div class="color" id="c"></div>
-                <h4>Синий</h4>
-            </div>
-            <div class="container">
-                <div class="color" id="d"></div>
-                <h4>Темно-голубой</h4>
-            </div>
-            <div class="container">
-                <div class="color" id="e"></div>
-                <h4>Красно-пурпурно-бордовый</h4>
-            </div>
-            <div class="container">
-                <div class="color" id="f"></div>
-                <h4>Нежненький</h4>
-            </div>
+            <label
+                v-for="color in colors"
+                :key="`${color.name}-${color.value}`"
+                class="container"
+            >
+                <input
+                    v-model="selectedColor"
+                    class="color-radio"
+                    type="radio"
+                    name="catalog-color-list"
+                    :value="color.name"
+                >
+                <span class="color" :style="{ backgroundColor: color.value }"></span>
+                <span>{{ color.name }}</span>
+            </label>
     </div>    
     
 </template>
@@ -59,6 +60,7 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             font-size: 12px;
         }
         .container{
+            position: relative;
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 9px;
@@ -69,70 +71,38 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             padding-left: 20px;
             padding-top:10px ;
             max-height: 30px;
+            cursor: pointer;
             
  
-            h4{
+            span{
                 color: var(--text-color);
                 font-size: 12px;
                 font-weight: 500;
             }
         }
         .color{
+            display: block;
+            flex: 0 0 20px;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
-            
-            
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
         }
-    
-    #a{
-        background-color: #F5DC41;
+        .color-radio{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
         }
-    #b{
-        background-color: #007C7A;
+        .color-radio:checked + .color{
+            box-shadow: 0 0 0 3px var(--accent-color);
+            transform: scale(0.9);
         }
-    #c{
-        background-color: #263669;
-        }
-    #d{
-        background-color: #4A7AB8;
-        }
-    #e{
-        background-color: #B2092C;
-        }
-    #f{
-        background-color: #B5A0C9;
-        }
-    #g{
-        background-color: #FC8B23;
-        }
-    #h{
-        background-color: #C8C8C8;
-        }
-    #i{
-        background-color: #DBC08D;
-        }
-    #j{
-        background-color: #FFFFFF;
-        }
-    #k{
-        background-color: #B5A0C9;
-        }
-    #l{
-        background-color: #FC8B23;
-        }
-    #m{
-        background-color: #BFA470;
-        }
-    #n{
-        background-color: #F5DC41;
-        }
-    #o{
-        background-color: #007C7A;
-        }
-    #p{
-        background-color: #FFFFFF;
+        .color-radio:focus-visible + .color{
+            box-shadow: 0 0 0 3px var(--accent-color);
         }
 
     }

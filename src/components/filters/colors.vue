@@ -1,5 +1,22 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
+
+const selectedColor = ref('');
+
+const colors = [
+    { name: 'Желтый', value: '#F5DC41' },
+    { name: 'Темно-зеленый', value: '#007C7A' },
+    { name: 'Синий', value: '#263669' },
+    { name: 'Темно-голубой', value: '#4A7AB8' },
+    { name: 'Красно-пурпурно-бордовый', value: '#B2092C' },
+    { name: 'Нежненький', value: '#B5A0C9' },
+    { name: 'Оранжевый', value: '#FC8B23' },
+    { name: 'Серый', value: '#C8C8C8' },
+    { name: 'Бежевый', value: '#DBC08D' },
+    { name: 'Белый', value: '#FFFFFF' },
+    { name: 'Песочный', value: '#BFA470' },
+];
 </script>
 <template>
     <div class="colors">
@@ -9,22 +26,21 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
         </div>
         
         <div class="container">
-            <div class="color" id="a"></div>
-            <div class="color" id="b"></div>
-            <div class="color" id="c"></div>
-            <div class="color" id="d"></div>
-            <div class="color" id="e"></div>
-            <div class="color" id="f"></div>
-            <div class="color" id="g"></div>
-            <div class="color" id="h"></div>
-            <div class="color" id="i"></div>
-            <div class="color" id="j"></div>
-            <div class="color" id="k"></div>
-            <div class="color" id="l"></div>
-            <div class="color" id="m"></div>
-            <div class="color" id="n"></div>
-            <div class="color" id="o"></div>
-            <div class="color" id="p"></div>
+            <label
+                v-for="color in colors"
+                :key="`${color.name}-${color.value}`"
+                class="color-option"
+                :title="color.name"
+            >
+                <input
+                    v-model="selectedColor"
+                    class="color-radio"
+                    type="radio"
+                    name="catalog-color-grid"
+                    :value="color.name"
+                >
+                <span class="color" :style="{ backgroundColor: color.value }"></span>
+            </label>
         </div>
          
     </div>    
@@ -35,13 +51,12 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
         border-radius: 16px;
         width: 100%;
         max-width: 260px;
-        height: 120px;
-        padding-top:16px;
+        min-height: 120px;
+        padding: 16px 20px 20px;
         .TextCon{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: 0 20px;
             img{
                 cursor: pointer;
             }
@@ -52,67 +67,40 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             font-size: 12px;
         }
         .container{
-            flex-wrap: wrap;
-            gap: 9px;
-            justify-content: center;
-            padding: 10px 14px 0px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 20px);
+            gap: 14px;
+            justify-content: start;
+            padding: 16px 0 0;
         }
         .color{
+            display: block;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
-            
-            
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
         }
-    
-    #a{
-        background-color: #F5DC41;
+        .color-option{
+            position: relative;
+            display: block;
+            width: 20px;
+            height: 20px;
         }
-    #b{
-        background-color: #007C7A;
+        .color-radio{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
         }
-    #c{
-        background-color: #263669;
+        .color-radio:checked + .color{
+            box-shadow: 0 0 0 3px var(--accent-color);
+            transform: scale(0.9);
         }
-    #d{
-        background-color: #4A7AB8;
-        }
-    #e{
-        background-color: #B2092C;
-        }
-    #f{
-        background-color: #B5A0C9;
-        }
-    #g{
-        background-color: #FC8B23;
-        }
-    #h{
-        background-color: #C8C8C8;
-        }
-    #i{
-        background-color: #DBC08D;
-        }
-    #j{
-        background-color: #FFFFFF;
-        }
-    #k{
-        background-color: #B5A0C9;
-        }
-    #l{
-        background-color: #FC8B23;
-        }
-    #m{
-        background-color: #BFA470;
-        }
-    #n{
-        background-color: #F5DC41;
-        }
-    #o{
-        background-color: #007C7A;
-        }
-    #p{
-        background-color: #FFFFFF;
+        .color-radio:focus-visible + .color{
+            box-shadow: 0 0 0 3px var(--accent-color);
         }
 
     }

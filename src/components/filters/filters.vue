@@ -126,6 +126,8 @@ onBeforeUnmount(() => {
         gap: 10px;
         background-color: var(--card-bg-color);
         width: 260px;
+        padding: 14px;
+        border-radius: 16px;
 
         @include laptop{
             display: none;
@@ -234,6 +236,7 @@ onBeforeUnmount(() => {
             .colors2{
                 max-width: none;
             }
+
         }
     }
 </style>

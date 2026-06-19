@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onBeforeUnmount, ref, watch } from 'vue';
 import Logo from '@/components/ui/Logo.vue';
 import Emblem from '@/components/header/emblem.vue';
 import user from '@/components/header/user.vue';
@@ -10,6 +10,14 @@ import Bonds from '@/components/header/Bonds.vue';
 import basket from '@/components/header/basket.vue';
 
 const isMenuOpen = ref(false);
+
+watch(isMenuOpen, (isOpen) => {
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+});
+
+onBeforeUnmount(() => {
+  document.body.style.overflow = '';
+});
 </script>
 
 <template>
@@ -29,6 +37,7 @@ const isMenuOpen = ref(false);
       <Lang />
       <button
         class="menu-toggle"
+        :class="{ 'menu-toggle--open': isMenuOpen }"
         type="button"
         :aria-expanded="isMenuOpen"
         aria-controls="header-navigation"
@@ -41,8 +50,42 @@ const isMenuOpen = ref(false);
       </button>
     </div>
   </div>
-  <div id="header-navigation" class="navWrapper" :class="{ 'navWrapper--open': isMenuOpen }">
-    <Navigator />
+  <div id="header-navigation" class="navWrapper" :class="{ 'navWrapper--open': isMenuOpen }" @click.self="isMenuOpen = false">
+    <aside class="navWrapper__panel">
+      <div class="navWrapper__top">
+        <div class="navWrapper__brand">
+          <Logo />
+          <Emblem />
+          <div class="navWrapper__caption">
+            <span>Производитель турецкого</span>
+            <span>трикотажного полотна</span>
+          </div>
+        </div>
+        <button class="navWrapper__close" type="button" aria-label="Закрыть меню" @click="isMenuOpen = false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+      <div class="navWrapper__lang">
+        <Lang />
+      </div>
+
+      <Navigator />
+
+      <div class="navWrapper__contacts">
+        <call />
+      </div>
+
+      <div class="navWrapper__actions">
+        <basket />
+        <user />
+      </div>
+
+      <div class="navWrapper__bonds">
+        <Bonds />
+      </div>
+    </aside>
   </div>
   <div class="bondsWrapper">
     <Bonds />
@@ -146,6 +189,7 @@ const isMenuOpen = ref(false);
       height: 2px;
       background-color: currentColor;
       border-radius: 999px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
     @include laptop {
@@ -156,6 +200,20 @@ const isMenuOpen = ref(false);
       display: inline-flex;
       width: 40px;
       height: 40px;
+    }
+  }
+
+  .menu-toggle--open {
+    span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
     }
   }
 
@@ -191,13 +249,216 @@ const isMenuOpen = ref(false);
   }
 }
 
+.navWrapper__panel {
+  width: 100%;
+}
+
+.navWrapper__top,
+.navWrapper__lang,
+.navWrapper__contacts,
+.navWrapper__actions,
+.navWrapper__bonds {
+  display: none;
+}
+
 .navWrapper--open {
   @include laptop {
-    display: block;
+    display: flex;
   }
 
   @include mobile {
+    display: flex;
+  }
+}
+
+@include laptop {
+  .navWrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    align-items: stretch;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(83, 91, 99, 0.86);
+  }
+
+  .navWrapper__panel {
+    width: 244px;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: var(--main-color);
+    color: #fff;
+  }
+
+  .navWrapper__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 28px 28px 10px 22px;
+  }
+
+  .navWrapper__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  .navWrapper__brand .logo img {
+    height: 36px;
+  }
+
+  .navWrapper__brand .icons_logo {
+    padding: 0;
+    gap: 8px;
+  }
+
+  .navWrapper__brand .icons_logo img {
+    height: 20px;
+  }
+
+  .navWrapper__caption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: var(--bg-duo-color);
+    font-size: 8px;
+    line-height: 1.35;
+  }
+
+  .navWrapper__close {
+    position: relative;
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .navWrapper__close span {
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    width: 28px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 999px;
+  }
+
+  .navWrapper__close span:first-child {
+    transform: rotate(45deg);
+  }
+
+  .navWrapper__close span:last-child {
+    transform: rotate(-45deg);
+  }
+
+  .navWrapper__lang {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 28px 22px;
+  }
+
+  .navWrapper__lang .lang {
+    font-size: 10px;
+  }
+
+  .navWrapper .app-header__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+    padding: 0 22px 28px;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .navWrapper .app-header__link {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .navWrapper__contacts {
     display: block;
+    padding: 0 22px 18px;
+  }
+
+  .navWrapper__contacts .call {
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .navWrapper__contacts .call .phone_number h2 {
+    color: #fff;
+    font-size: 15px;
+  }
+
+  .navWrapper__contacts .call .second_line_text {
+    align-self: flex-start;
+    color: var(--bg-duo-color);
+    font-size: 10px;
+    text-decoration: underline;
+  }
+
+  .navWrapper__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 22px 30px;
+  }
+
+  .navWrapper__actions .basket {
+    width: 36px;
+    height: 36px;
+    background-color: var(--second-main-color);
+  }
+
+  .navWrapper__actions .user {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .navWrapper__bonds {
+    display: block;
+  }
+
+  .navWrapper__bonds .bonds {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    min-height: 0;
+    padding: 0;
+    background-color: var(--main-color);
+  }
+
+  .navWrapper__bonds .bonds .BB {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: none;
+    height: 36px;
+    padding: 0 22px;
+    clip-path: none;
+    color: var(--main-color);
+    text-align: left;
+  }
+
+  .navWrapper__bonds .bonds .container {
+    max-width: none;
+    padding: 12px 22px 0;
+    gap: 9px;
+  }
+}
+
+@include mobile {
+  .navWrapper__panel {
+    width: min(100%, 244px);
   }
 }
 

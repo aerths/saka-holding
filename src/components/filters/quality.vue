@@ -1,5 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
+
+const selectedQuality = ref('');
+
+const qualities = [
+    'Кулирная гладь',
+    'Рибана',
+    'Пике',
+    'Интерлок',
+    'Футер 2-х нитка',
+    'Футер 3-х нитка',
+    'Кашкорсе к 2х нитке',
+    'Кашкорсе к 3х нитке',
+    'Double Face',
+];
 </script>
 <template>
     <div class="quality">
@@ -7,44 +22,21 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             <h3>Качество</h3>
             <img :src="caretRightIcon" alt="">
         </div>
-        
-        
-            <div class="container">
-                <h4>Кулирная гладь</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Рибана</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Пике</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Интерлок</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Футер 2-х нитка</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Футер 3-х нитка</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Кашкорсе к 2х нитке</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Кашкорсе к 3х нитке</h4>
-                <div class="color"></div>
-            </div>
-            <div class="container">
-                <h4>Double Face</h4>
-                <div class="color"></div>
-            </div>
+            <label
+                v-for="qualityItem in qualities"
+                :key="qualityItem"
+                class="container"
+            >
+                <span>{{ qualityItem }}</span>
+                <input
+                    v-model="selectedQuality"
+                    class="quality-radio"
+                    type="radio"
+                    name="quality"
+                    :value="qualityItem"
+                >
+                <span class="radio-view"></span>
+            </label>
     </div>    
     
 </template>
@@ -72,6 +64,7 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             font-size: 12px;
         }
         .container{
+            position: relative;
             flex-direction: row;
             flex-wrap: nowrap;
             gap: 9px;
@@ -83,21 +76,40 @@ import caretRightIcon from '@/assets/icons/CaretRight.svg?url';
             padding-right: 20px;
             padding-top:10px ;
             max-height: 30px;
+            cursor: pointer;
  
-            h4{
+            span{
                 color: var(--text-color);
                 font-size: 12px;
                 font-weight: 500;
             }
         }
-        .color{
+        .quality-radio{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .radio-view{
+            position: relative;
+            flex: 0 0 20px;
             width: 20px;
             height: 20px;
             border-radius: 50%;
             cursor: pointer;
             background-color: var(--card-bg-color);
-            
-            
+            border: 1px solid var(--muted-text-color);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .quality-radio:checked + .radio-view{
+            border-color: var(--accent-color);
+            box-shadow: inset 0 0 0 5px var(--card-bg-color);
+            background-color: var(--accent-color);
+        }
+        .quality-radio:focus-visible + .radio-view{
+            box-shadow: 0 0 0 3px var(--accent-color);
         }
     
     }
