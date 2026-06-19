@@ -25,7 +25,7 @@ defineProps<{
     border-radius: 50px;
     border:none;
     cursor: pointer;
-    color: black;
+    color: var(--main-color);
     font-weight: bold;
     font-size: 16px;
     display: flex;

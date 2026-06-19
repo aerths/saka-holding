@@ -40,6 +40,10 @@
     }
 }
 
+:root[data-theme='dark'] .app-header__nav {
+    color: var(--text-color);
+}
+
 .app-header__link {
     text-decoration: none;
     cursor: pointer;

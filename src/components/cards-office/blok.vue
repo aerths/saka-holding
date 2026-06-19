@@ -44,7 +44,7 @@ defineProps<{
     overflow: hidden;
     border-radius: 16px;
     background-color: var(--second-main-color);
-    color: var(--bg-color);
+    color: #FFF;
     isolation: isolate;
     max-height: 400px;
 
@@ -99,6 +99,7 @@ defineProps<{
 .blok_office_text h3 {
     margin: 0;
     max-width: 220px;
+    color: #FFF;
     font-size: 20px;
     font-weight: 600;
     line-height: 1.3;

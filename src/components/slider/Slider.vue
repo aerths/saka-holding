@@ -120,7 +120,7 @@ onBeforeUnmount(stopSlider)
         margin: 0 auto;
         overflow: visible;
         border-radius: 13px;
-        background-color: var(--black-color);
+        background-color: var(--main-color);
 
         @include laptop {
             height: 360px;

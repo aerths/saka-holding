@@ -3,19 +3,23 @@ import userIcon from '@/assets/icons/User.svg?url';
 </script>
 
 <template>
-    <div class="user">
+    <button class="user" type="button">
         <img :src="userIcon" alt="">
         <span>Войти</span>
-    </div>
+    </button>
 </template>
 
 <style lang="scss">
 .user {
+    padding: 0;
     color: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    background: transparent;
+    border: none;
+    font: inherit;
 }
 </style>

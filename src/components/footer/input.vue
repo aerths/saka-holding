@@ -27,6 +27,7 @@ defineProps<{
                 background-color: var(--second-main-color);
                 border: none;
                 padding: 0px 40px;
+                color: var(--bg-color);
                &--default {
                border-radius: 16px;
                max-width: 237px;
@@ -48,7 +49,7 @@ defineProps<{
                 
             }
             input::placeholder{
-                color: white;
+                color: var(--bg-color);
                 font-size: 14px;
                 font-weight: regular;
             }
@@ -61,6 +62,13 @@ defineProps<{
             }
 
             
+        }
+
+        :root[data-theme='dark'] .Email {
+            .inp,
+            input::placeholder {
+                color: var(--text-color);
+            }
         }
 
 
