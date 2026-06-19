@@ -46,7 +46,12 @@ import tekstillOpenend from '../../assets/images/tekstillOpenend.png'
     .full_block_texstill {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 42px;
         justify-content: space-between;
+
+        @include laptop{
+            justify-content: center;
+        }
     }
 </style>

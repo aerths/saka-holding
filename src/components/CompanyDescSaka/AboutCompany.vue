@@ -57,11 +57,48 @@ import crownIcon from '@/assets/icons/crown.svg?url';
 
 <style setup lang="scss">
     .catalog{
+        position: relative;
         max-width: 1400px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 100px;
         background-color: var(--bg-color);
+
+        @include laptop{
+            min-height: 620px;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        @include mobile{
+            min-height: 560px;
+        }
+
+        .img_catalog{
+            @include laptop{
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                z-index: 1;
+                width: min(100%, 620px);
+                transform: translateX(-50%);
+                opacity: 0.34;
+                pointer-events: none;
+            }
+
+            @include mobile{
+                width: 480px;
+                opacity: 0.26;
+            }
+
+            img{
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
 
         .blok_yellow {
         background-color: var(--accent-color);
@@ -86,24 +123,53 @@ import crownIcon from '@/assets/icons/crown.svg?url';
     }
     
     .title_catalog {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-direction: column;
         padding: 40px 0px;
         justify-content: space-between;
+
+        @include laptop{
+            width: 100%;
+            align-items: center;
+            gap: 20px;
+            padding: 48px 24px;
+            text-align: center;
+        }
+
+        @include mobile{
+            padding: 32px 0;
+        }
     }
     .one_title_catalog {
         h2{
             font-weight: SemiBold;
             font-size: 26px;
+
+            @include mobile{
+                font-size: 20px;
+                line-height: 1.3;
+            }
         }
         max-width: 83%;
+
+        @include laptop{
+            max-width: 100%;
+        }
     }
 
     .worthiness {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     padding-top: 38px;
+
+    @include laptop{
+        padding-top: 18px;
+    }
     }
 
     .ellipce {

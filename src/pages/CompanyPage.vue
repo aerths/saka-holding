@@ -38,6 +38,11 @@ import fullsection from '@/components/sixblockcompany/fullsection.vue';
 </template>
 
 <style setup lang="scss"> 
+    .CompanyPage{
+        width: 100%;
+        overflow: hidden;
+    }
+
     .Container-Block:nth-child(1){
             padding-bottom: 0;
         }
@@ -47,4 +52,17 @@ import fullsection from '@/components/sixblockcompany/fullsection.vue';
     .Container-Block:nth-child(3){
             padding-top: 0px;
         }
+
+    .component-persons{
+        width: 100%;
+        padding: 70px clamp(16px, 5vw, 180px) 80px;
+
+        @include laptop{
+            padding: 48px 32px 56px;
+        }
+
+        @include mobile{
+            padding: 32px 16px 40px;
+        }
+    }
 </style>
